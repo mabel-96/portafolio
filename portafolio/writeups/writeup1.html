@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Título del Write-Up | Portafolio de Ciberseguridad</title>
+    <!-- Estilos -->
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/writeups.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <!-- Librería para resaltar código -->
+    <link rel="stylesheet" href="../lib/prism/prism.css">
+    <!-- Librería para íconos -->
+    <link rel="stylesheet" href="../lib/fontawesome/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="../assets/images/logo.png" alt="Logo">
+                <h1>Mi Portafolio de Ciberseguridad</h1>
+            </div>
+            <ul class="menu">
+                <li><a href="../index.html#inicio">Inicio</a></li>
+                <li><a href="../index.html#sobre-mi">Sobre Mí</a></li>
+                <li><a href="../index.html#writeups">Write-Ups</a></li>
+                <li><a href="../index.html#certificaciones">Certificaciones</a></li>
+                <li><a href="../index.html#contacto">Contacto</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main class="writeup-content">
+        <article>
+            <div class="writeup-header">
+                <div class="writeup-meta">
+                    <span class="date">Fecha: 31 de marzo, 2025</span>
+                    <span class="tags">
+                        <span class="tag">Web</span>
+                        <span class="tag">SQLi</span>
+                    </span>
+                    <span class="difficulty">Dificultad: Media</span>
+                </div>
+                <h1>Título del Write-Up</h1>
+                <div class="author">Por: Tu Nombre</div>
+            </div>
+
+            <div class="toc">
+                <h3>Contenido</h3>
+                <ul>
+                    <li><a href="#introduccion">Introducción</a></li>
+                    <li><a href="#reconocimiento">Reconocimiento</a></li>
+                    <li><a href="#vulnerabilidad">Identificación de la Vulnerabilidad</a></li>
+                    <li><a href="#explotacion">Explotación</a></li>
+                    <li><a href="#post-explotacion">Post-Explotación</a></li>
+                    <li><a href="#mitigacion">Mitigación</a></li>
+                    <li><a href="#conclusion">Conclusión</a></li>
+                </ul>
+            </div>
+
+            <section id="introduccion">
+                <h2>Introducción</h2>
+                <p>
+                    Aquí debes proporcionar una breve descripción del sistema objetivo, el alcance de tu análisis y los objetivos que te has propuesto alcanzar. Explica también el contexto y la importancia de este write-up.
+                </p>
+                <div class="info-box">
+                    <h4><i class="fas fa-info-circle"></i> Entorno</h4>
+                    <ul>
+                        <li><strong>Objetivo:</strong> Nombre/IP del sistema</li>
+                        <li><strong>Plataforma:</strong> HackTheBox, Vulnhub, etc.</li>
+                        <li><strong>Dificultad:</strong> Fácil, Media, Difícil</li>
+                        <li><strong>Fecha:</strong> Cuándo realizaste este trabajo</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="reconocimiento">
+                <h2>Reconocimiento</h2>
+                <p>
+                    Detalla el proceso de enumeración y reconocimiento que realizaste para identificar posibles vectores de ataque.
+                </p>
+                <h3>Escaneo de Puertos</h3>
+                <p>Resultados del escaneo con herramientas como Nmap.</p>
+                
+                <pre><code class="language-bash">$ nmap -sV -sC -p- 10.10.10.10
+Starting Nmap 7.92 ( https://nmap.org )
+Nmap scan report for target.com (10.10.10.10)
+Host is up (0.023s latency).
+Not shown: 65530 closed ports
+PORT    STATE SERVICE  VERSION
+22/tcp  open  ssh      OpenSSH 8.2p1
+80/tcp  open  http     Apache httpd 2.4.46
+443/tcp open  https    Apache httpd 2.4.46
+</code></pre>
+
+                <h3>Enumeración Web</h3>
+                <p>Información recopilada durante la fase de reconocimiento web.</p>
+                <div class="image-container">
+                    <img src="../assets/images/example-screenshot.png" alt="Captura de pantalla del sitio web">
+                    <span class="caption">Figura 1: Página inicial del objetivo.</span>
+                </div>
+            </section>
+
+            <section id="vulnerabilidad">
+                <h2>Identificación de la Vulnerabilidad</h2>
+                <p>
+                    Explica cómo identificaste la vulnerabilidad, qué tecnologías estaban implicadas, y por qué era explotable.
+                </p>
+                <div class="warning-box">
+                    <h4><i class="fas fa-exclamation-triangle"></i> Vulnerabilidad Identificada</h4>
+                    <p>
+                        Describe la vulnerabilidad (por ejemplo, SQLi, XSS, RCE) con detalles técnicos suficientes para que otros entiendan la naturaleza del problema.
+                    </p>
+                </div>
+                <p>
+                    Aquí puedes incluir ejemplos de código vulnerable, salidas de herramientas de análisis, o explicaciones paso a paso de cómo descubriste la vulnerabilidad.
+                </p>
+                <pre><code class="language-php">// Ejemplo de código vulnerable
+$id = $_GET['id'];
+$query = "SELECT * FROM products WHERE product_id = $id"; // Vulnerable a SQLi
+$result = mysqli_query($conn, $query);
+</code></pre>
+            </section>
+
+            <section id="explotacion">
+                <h2>Explotación</h2>
+                <p>
+                    Detalla el proceso de explotación paso a paso, incluyendo las herramientas y técnicas utilizadas.
+                </p>
+                <h3>Desarrollo del Exploit</h3>
+                <p>
+                    Explica cómo desarrollaste o utilizaste un exploit para aprovechar la vulnerabilidad.
+                </p>
+                <pre><code class="language-python"># Ejemplo de script de explotación
+import requests
+
+url = "http://target.com/vulnerable.php"
+payload = "1' UNION SELECT username,password FROM users -- -"
+
+response = requests.get(f"{url}?id={payload}")
+print(response.text)
+</code></pre>
+
+                <h3>Ejecución del Ataque</h3>
+                <p>
+                    Muestra el resultado de la ejecución del exploit y cómo lograste acceso.
+                </p>
+                <div class="image-container">
+                    <img src="../assets/images/example-exploit.png" alt="Resultado de la explotación">
+                    <span class="caption">Figura 2: Resultado exitoso de la explotación.</span>
+                </div>
+            </section>
+
+            <section id="post-explotacion">
+                <h2>Post-Explotación</h2>
+                <p>
+                    Describe las actividades realizadas después de obtener acceso inicial: escalada de privilegios, movimiento lateral, etc.
+                </p>
+                <h3>Escalada de Privilegios</h3>
+                <p>
+                    Explica cómo escalaste privilegios en el sistema, si fue aplicable.
+                </p>
+                <pre><code class="language-bash">$ sudo -l
+User www-data may run the following commands on target:
+    (root) NOPASSWD: /usr/bin/python3 /opt/backup.py
+
+$ cat /opt/backup.py
+import os
+import zipfile
+# El resto del script...
+</code></pre>
+            </section>
+
+            <section id="mitigacion">
+                <h2>Mitigación</h2>
+                <p>
+                    Proporciona recomendaciones sobre cómo mitigar o corregir la vulnerabilidad explotada.
+                </p>
+                <div class="success-box">
+                    <h4><i class="fas fa-shield-alt"></i> Recomendaciones de Seguridad</h4>
+                    <ul>
+                        <li>Utilizar consultas parametrizadas para prevenir SQLi</li>
+                        <li>Actualizar el software vulnerable a la última versión</li>
+                        <li>Implementar un WAF para proteger contra ataques web comunes</li>
+                        <li>Seguir el principio de mínimo privilegio</li>
+                    </ul>
+                </div>
+                <p>
+                    Código corregido como ejemplo:
+                </p>
+                <pre><code class="language-php">// Código corregido
+$id = $_GET['id'];
+$stmt = $conn->prepare("SELECT * FROM products WHERE product_id = ?");
+$stmt->bind_param("i", $id); // Consulta parametrizada segura
+$stmt->execute();
+$result = $stmt->get_result();
+</code></pre>
+            </section>
+
+            <section id="conclusion">
+                <h2>Conclusión</h2>
+                <p>
+                    Resume los hallazgos clave, lecciones aprendidas y la importancia de abordar este tipo de vulnerabilidades.
+                </p>
+                <p>
+                    Menciona también cualquier técnica o herramienta nueva que hayas aprendido durante este proceso.
+                </p>
+            </section>
+
+            <div class="tags-section">
+                <h4>Etiquetas:</h4>
+                <div class="tags-list">
+                    <a href="#" class="tag">SQLi</a>
+                    <a href="#" class="tag">Web</a>
+                    <a href="#" class="tag">Apache</a>
+                    <a href="#" class="tag">PHP</a>
+                </div>
+            </div>
+
+            <div class="share-section">
+                <h4>Compartir:</h4>
+                <div class="social-share">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+        </article>
+
+        <aside class="sidebar">
+            <div class="author-info">
+                <img src="../assets/images/profile.jpg" alt="Foto de perfil">
+                <h3>Tu Nombre</h3>
+                <p>Profesional en Ciberseguridad especializado en pentesting y análisis de vulnerabilidades.</p>
+                <div class="author-social">
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+
+            <div class="related-writeups">
+                <h3>Write-Ups Relacionados</h3>
+                <ul>
+                    <li><a href="#">Explotación de XSS en Aplicación Web</a></li>
+                    <li><a href="#">Bypass de Autenticación en Portal de Servicios</a></li>
+                    <li><a href="#">Análisis de Seguridad en API REST</a></li>
+                </ul>
+            </div>
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Mi Portafolio de Ciberseguridad. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/main.js"></script>
+    <script src="../lib/prism/prism.js"></script>
+</body>
+</html>
