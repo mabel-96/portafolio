@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio</title>
+    <!-- Estilos -->
+    <link rel="stylesheet" href="C:\Users\mabel.trujillo\Desktop\ingenieria web\main.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Librería para íconos (opcional) -->
+    <link rel="stylesheet" href="lib/fontawesome/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="assets/images/logo.png" alt="Logo">
+                <h1>Mi Portafolio</h1>
+            </div>
+            <ul class="menu">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#sobre-mi">Sobre Mí</a></li>
+                <li><a href="#writeups">Write-Ups</a></li>
+                <li><a href="#certificaciones">Certificaciones</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero">
+            <div class="hero-content">
+                <h2>Análisis de Seguridad y Pentesting</h2>
+                <p>Documentación detallada de mis experiencias en ciberseguridad</p>
+                <a href="#writeups" class="btn">Ver Write-Ups</a>
+            </div>
+        </section>
+
+        <section id="sobre-mi" class="about">
+            <h2>Sobre Mí</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Soy un estudiante de ingeniera en sistema, en 8 semestre ingresando en el campo de la ciberseguridad especializadome en análisis de vulnerabilidades y pentesting. Este portafolio muestra mi trabajo y experiencia en este campo.</p>
+                    <p>Mi enfoque se centra en la seguridad ofensiva, documentando paso a paso los procesos de identificación y explotación de vulnerabilidades.</p>
+                </div>
+                <div class="skills">
+                    <h3>Habilidades</h3>
+                    <ul>
+                        <li>Pentesting</li>
+                        <li>Análisis de Vulnerabilidades</li>
+                        <li>Reversing</li>
+                        <li>CTF</li>
+                        <li>Seguridad en Aplicaciones Web</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="writeups" class="writeups">
+            <h2>Write-Ups</h2>
+            <div class="writeups-grid">
+                <!-- Ejemplo de tarjeta de Write-Up -->
+                <div class="writeup-card">
+                    <div class="card-header">
+                        <span class="tag">Web</span>
+                        <h3>SQLi en Aplicación Web</h3>
+                    </div>
+                    <p>Análisis y explotación de una vulnerabilidad de inyección SQL en una aplicación web vulnerable.</p>
+                    <a href="writeups/writeup1.html" class="btn">Leer más</a>
+                </div>
+                
+                <div class="writeup-card">
+                    <div class="card-header">
+                        <span class="tag">Red</span>
+                        <h3>Análisis de Seguridad en Red Corporativa</h3>
+                    </div>
+                    <p>Evaluación de seguridad y detección de vulnerabilidades en una infraestructura de red empresarial.</p>
+                    <a href="writeups/writeup2.html" class="btn">Leer más</a>
+                </div>
+                
+                <!-- Puedes añadir más tarjetas de write-ups aquí -->
+            </div>
+        </section>
+
+        <section id="certificaciones" class="certifications">
+            <h2>Certificaciones</h2>
+            <div class="cert-list">
+                <!-- Ejemplos de certificaciones -->
+                <div class="cert-item">
+                    <i class="fas fa-certificate"></i>
+                    <h3>.................</h3>
+                    <p>...............</p>
+                </div>
+                <div class="cert-item">
+                    <i class="fas fa-certificate"></i>
+                    <h3>.................</h3>
+                    <p>...............</p>
+                </div>
+                <!-- Puedes añadir más certificaciones aquí -->
+            </div>
+        </section>
+
+        <section id="contacto" class="contact">
+            <h2>Contacto</h2>
+            <div class="contact-content">
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Nombre</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensaje</label>
+                        <textarea id="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Enviar</button>
+                </form>
+                <div class="social-links">
+                    <a href="#" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                    <a href="#" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                    <a href="#" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Mi Portafolio de Ciberseguridad. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+</html>
