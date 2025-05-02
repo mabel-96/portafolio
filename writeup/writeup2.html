@@ -15,249 +15,159 @@
 </head>
 <body>
     <header>
-        <nav>
-            <div class="logo">
-                <img src="imagenes/png.png" alt="Logo"> <!-- ✅ -->
-                <h1>Mi Portafolio de Ciberseguridad</h1>
-            </div>
-            <ul class="menu">
-                <li><a href="../index.html#inicio">Inicio</a></li>
-                <li><a href="../index.html#sobre-mi">Sobre Mí</a></li>
-                <li><a href="../index.html#writeups">Write-Ups</a></li>
-                <li><a href="../index.html#certificaciones">Certificaciones</a></li>
-                <li><a href="../index.html#contacto">Contacto</a></li>
-            </ul>
-            <div class="menu-toggle">
-                <i class="fas fa-bars"></i>
-            </div>
-        </nav>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">Secure<span>Net</span></a>
+                <ul class="nav-links">
+                    <li><a href="#services">Servicios</a></li>
+                    <li><a href="#methodology">Metodología</a></li>
+                    <li><a href="#about">Nosotros</a></li>
+                    <li><a href="#testimonials">Testimonios</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main class="writeup-content">
-        <article>
-            <div class="writeup-header">
-                <div class="writeup-meta">
-                    <span class="date">Fecha: 31 de marzo, 2025</span>
-                    <span class="tags">
-                        <span class="tag">Web</span>
-                        <span class="tag">SQLi</span>
-                    </span>
-                    <span class="difficulty">Dificultad: Media</span>
-                </div>
-                <h1>Título del Write-Up</h1>
-                <div class="author">Por: Tu Nombre</div>
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Análisis de Seguridad en Red Corporativa</h1>
+                <p>Protegemos su infraestructura empresarial con soluciones avanzadas de ciberseguridad, detección de vulnerabilidades y prevención de amenazas.</p>
+                <a href="#contact" class="btn">Solicitar Evaluación</a>
+                <a href="#services" class="btn btn-outline">Nuestros Servicios</a>
             </div>
+        </div>
+    </section>
 
-            <div class="toc">
-                <h3>Contenido</h3>
-                <ul>
-                    <li><a href="#introduccion">Introducción</a></li>
-                    <li><a href="#reconocimiento">Reconocimiento</a></li>
-                    <li><a href="#vulnerabilidad">Identificación de la Vulnerabilidad</a></li>
-                    <li><a href="#explotacion">Explotación</a></li>
-                    <li><a href="#post-explotacion">Post-Explotación</a></li>
-                    <li><a href="#mitigacion">Mitigación</a></li>
-                    <li><a href="#conclusion">Conclusión</a></li>
-                </ul>
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nuestros Servicios</h2>
+                <p>Ofrecemos soluciones integrales de seguridad para proteger su red corporativa contra las amenazas más recientes.</p>
             </div>
-
-            <section id="introduccion">
-                <h2>Introducción</h2>
-                <p>
-                    Aquí debes proporcionar una breve descripción del sistema objetivo, el alcance de tu análisis y los objetivos que te has propuesto alcanzar. Explica también el contexto y la importancia de este write-up.
-                </p>
-                <div class="info-box">
-                    <h4><i class="fas fa-info-circle"></i> Entorno</h4>
-                    <ul>
-                        <li><strong>Objetivo:</strong> Nombre/IP del sistema</li>
-                        <li><strong>Plataforma:</strong> HackTheBox, Vulnhub, etc.</li>
-                        <li><strong>Dificultad:</strong> Fácil, Media, Difícil</li>
-                        <li><strong>Fecha:</strong> Cuándo realizaste este trabajo</li>
-                    </ul>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-content">
+                        <div class="icon-container">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="white" viewBox="0 0 16 16">
+                                <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/>
+                            </svg>
+                        </div>
+                        <h3>Evaluación de Vulnerabilidades</h3>
+                        <p>Realizamos análisis exhaustivos para identificar posibles puntos débiles en su infraestructura de red, incluyendo escaneo de puertos, detección de software desactualizado y verificación de configuraciones.</p>
+                    </div>
                 </div>
-            </section>
-
-            <section id="reconocimiento">
-                <h2>Reconocimiento</h2>
-                <p>
-                    Detalla el proceso de enumeración y reconocimiento que realizaste para identificar posibles vectores de ataque.
-                </p>
-                <h3>Escaneo de Puertos</h3>
-                <p>Resultados del escaneo con herramientas como Nmap.</p>
-                
-                <pre><code class="language-bash">$ nmap -sV -sC -p- 10.10.10.10
-Starting Nmap 7.92 ( https://nmap.org )
-Nmap scan report for target.com (10.10.10.10)
-Host is up (0.023s latency).
-Not shown: 65530 closed ports
-PORT    STATE SERVICE  VERSION
-22/tcp  open  ssh      OpenSSH 8.2p1
-80/tcp  open  http     Apache httpd 2.4.46
-443/tcp open  https    Apache httpd 2.4.46
-</code></pre>
-
-                <h3>Enumeración Web</h3>
-                <p>Información recopilada durante la fase de reconocimiento web.</p>
-                <div class="image-container">
-                    <img src="../assets/images/example-screenshot.png" alt="Captura de pantalla del sitio web">
-                    <span class="caption">Figura 1: Página inicial del objetivo.</span>
+                <div class="service-card">
+                    <div class="service-content">
+                        <div class="icon-container">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="white" viewBox="0 0 16 16">
+                                <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z"/>
+                            </svg>
+                        </div>
+                        <h3>Pruebas de Penetración</h3>
+                        <p>Simulamos ataques reales para probar la resistencia de sus sistemas de seguridad, identificando vulnerabilidades explotables antes que los atacantes reales puedan encontrarlas.</p>
+                    </div>
                 </div>
-            </section>
-
-            <section id="vulnerabilidad">
-                <h2>Identificación de la Vulnerabilidad</h2>
-                <p>
-                    Explica cómo identificaste la vulnerabilidad, qué tecnologías estaban implicadas, y por qué era explotable.
-                </p>
-                <div class="warning-box">
-                    <h4><i class="fas fa-exclamation-triangle"></i> Vulnerabilidad Identificada</h4>
-                    <p>
-                        Describe la vulnerabilidad (por ejemplo, SQLi, XSS, RCE) con detalles técnicos suficientes para que otros entiendan la naturaleza del problema.
-                    </p>
+                <div class="service-card">
+                    <div class="service-content">
+                        <div class="icon-container">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="white" viewBox="0 0 16 16">
+                                <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855-.143.268-.276.56-.395.872.705.157 1.472.257 2.282.287V1.077zM4.249 3.539c.142-.384.304-.744.481-1.078a6.7 6.7 0 0 1 .597-.933A7.01 7.01 0 0 0 3.051 3.05c.362.184.763.349 1.198.49zM3.509 7.5c.036-1.07.188-2.087.436-3.008a9.124 9.124 0 0 1-1.565-.667A6.964 6.964 0 0 0 1.018 7.5h2.49zm1.4-2.741a12.344 12.344 0 0 0-.4 2.741H7.5V5.091c-.91-.03-1.783-.145-2.591-.332zM8.5 5.09V7.5h2.99a12.342 12.342 0 0 0-.399-2.741c-.808.187-1.681.301-2.591.332zM4.51 8.5c.035.987.176 1.914.399 2.741A13.612 13.612 0 0 1 7.5 10.91V8.5H4.51zm3.99 0v2.409c.91.03 1.783.145 2.591.332.223-.827.364-1.754.4-2.741H8.5zm-3.282 3.696c.12.312.252.604.395.872.552 1.035 1.218 1.65 1.887 1.855V11.91c-.81.03-1.577.13-2.282.287zm.11 2.276a6.696 6.696 0 0 1-.598-.933 8.853 8.853 0 0 1-.481-1.079 8.38 8.38 0 0 0-1.198.49 7.01 7.01 0 0 0 2.276 1.522zm-1.383-2.964A13.36 13.36 0 0 1 3.508 8.5h-2.49a6.963 6.963 0 0 0 1.362 3.675c.47-.258.995-.482 1.565-.667zm6.728 2.964a7.009 7.009 0 0 0 2.275-1.521 8.376 8.376 0 0 0-1.197-.49 8.853 8.853 0 0 1-.481 1.078 6.688 6.688 0 0 1-.597.933zM8.5 11.909v3.014c.67-.204 1.335-.82 1.887-1.855.143-.268.276-.56.395-.872A12.63 12.63 0 0 0 8.5 11.91zm3.555-.401c.57.185 1.095.409 1.565.667A6.963 6.963 0 0 0 14.982 8.5h-2.49a13.36 13.36 0 0 1-.437 3.008zM14.982 7.5a6.963 6.963 0 0 0-1.362-3.675c-.47.258-.995.482-1.565.667.248.92.4 1.938.437 3.008h2.49zM11.27 2.461c.177.334.339.694.482 1.078a8.368 8.368 0 0 0 1.196-.49 7.01 7.01 0 0 0-2.275-1.52c.218.283.418.597.597.932zm-.488 1.343a7.765 7.765 0 0 0-.395-.872C9.835 1.897 9.17 1.282 8.5 1.077V4.09c.81-.03 1.577-.13 2.282-.287z"/>
+                            </svg>
+                        </div>
+                        <h3>Auditoría de Seguridad</h3>
+                        <p>Evaluamos el cumplimiento de políticas y estándares de seguridad, revisando sus procedimientos, controles y documentación para garantizar el cumplimiento regulatorio y mejores prácticas.</p>
+                    </div>
                 </div>
-                <p>
-                    Aquí puedes incluir ejemplos de código vulnerable, salidas de herramientas de análisis, o explicaciones paso a paso de cómo descubriste la vulnerabilidad.
-                </p>
-                <pre><code class="language-php">// Ejemplo de código vulnerable
-$id = $_GET['id'];
-$query = "SELECT * FROM products WHERE product_id = $id"; // Vulnerable a SQLi
-$result = mysqli_query($conn, $query);
-</code></pre>
-            </section>
-
-            <section id="explotacion">
-                <h2>Explotación</h2>
-                <p>
-                    Detalla el proceso de explotación paso a paso, incluyendo las herramientas y técnicas utilizadas.
-                </p>
-                <h3>Desarrollo del Exploit</h3>
-                <p>
-                    Explica cómo desarrollaste o utilizaste un exploit para aprovechar la vulnerabilidad.
-                </p>
-                <pre><code class="language-python"># Ejemplo de script de explotación
-import requests
-
-url = "http://target.com/vulnerable.php"
-payload = "1' UNION SELECT username,password FROM users -- -"
-
-response = requests.get(f"{url}?id={payload}")
-print(response.text)
-</code></pre>
-
-                <h3>Ejecución del Ataque</h3>
-                <p>
-                    Muestra el resultado de la ejecución del exploit y cómo lograste acceso.
-                </p>
-                <div class="image-container">
-                    <img src="../assets/images/example-exploit.png" alt="Resultado de la explotación">
-                    <span class="caption">Figura 2: Resultado exitoso de la explotación.</span>
-                </div>
-            </section>
-
-            <section id="post-explotacion">
-                <h2>Post-Explotación</h2>
-                <p>
-                    Describe las actividades realizadas después de obtener acceso inicial: escalada de privilegios, movimiento lateral, etc.
-                </p>
-                <h3>Escalada de Privilegios</h3>
-                <p>
-                    Explica cómo escalaste privilegios en el sistema, si fue aplicable.
-                </p>
-                <pre><code class="language-bash">$ sudo -l
-User www-data may run the following commands on target:
-    (root) NOPASSWD: /usr/bin/python3 /opt/backup.py
-
-$ cat /opt/backup.py
-import os
-import zipfile
-# El resto del script...
-</code></pre>
-            </section>
-
-            <section id="mitigacion">
-                <h2>Mitigación</h2>
-                <p>
-                    Proporciona recomendaciones sobre cómo mitigar o corregir la vulnerabilidad explotada.
-                </p>
-                <div class="success-box">
-                    <h4><i class="fas fa-shield-alt"></i> Recomendaciones de Seguridad</h4>
-                    <ul>
-                        <li>Utilizar consultas parametrizadas para prevenir SQLi</li>
-                        <li>Actualizar el software vulnerable a la última versión</li>
-                        <li>Implementar un WAF para proteger contra ataques web comunes</li>
-                        <li>Seguir el principio de mínimo privilegio</li>
-                    </ul>
-                </div>
-                <p>
-                    Código corregido como ejemplo:
-                </p>
-                <pre><code class="language-php">// Código corregido
-$id = $_GET['id'];
-$stmt = $conn->prepare("SELECT * FROM products WHERE product_id = ?");
-$stmt->bind_param("i", $id); // Consulta parametrizada segura
-$stmt->execute();
-$result = $stmt->get_result();
-</code></pre>
-            </section>
-
-            <section id="conclusion">
-                <h2>Conclusión</h2>
-                <p>
-                    Resume los hallazgos clave, lecciones aprendidas y la importancia de abordar este tipo de vulnerabilidades.
-                </p>
-                <p>
-                    Menciona también cualquier técnica o herramienta nueva que hayas aprendido durante este proceso.
-                </p>
-            </section>
-
-            <div class="tags-section">
-                <h4>Etiquetas:</h4>
-                <div class="tags-list">
-                    <a href="#" class="tag">SQLi</a>
-                    <a href="#" class="tag">Web</a>
-                    <a href="#" class="tag">Apache</a>
-                    <a href="#" class="tag">PHP</a>
+                <div class="service-card">
+                    <div class="service-content">
+                        <div class="icon-container">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="white" viewBox="0 0 16 16">
+                                <path d="M4 16s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H4Zm4-5.95a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/>
+                                <path d="M2 1a2 2 0 0 0-2 2v9.5A1.5 1.5 0 0 0 1.5 14h.653a5.373 5.373 0 0 1 1.066-2H1V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v9h-2.219c.554.654.89 1.373 1.066 2h.653a1.5 1.5 0 0 0 1.5-1.5V3a2 2 0 0 0-2-2H2Z"/>
+                            </svg>
+                        </div>
+                        <h3>Consultoría en Ciberseguridad</h3>
+                        <p>Brindamos asesoramiento experto sobre las mejores prácticas de seguridad, ayudando a desarrollar políticas efectivas, planes de respuesta a incidentes y estrategias de protección adaptadas a su organización.</p>
+                    </div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <div class="share-section">
-                <h4>Compartir:</h4>
-                <div class="social-share">
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                    <a href="#"><i class="fab fa-facebook"></i></a>
+    <section id="methodology" class="methodology">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nuestra Metodología</h2>
+                <p>Aplicamos un enfoque estructurado y riguroso para garantizar la seguridad integral de su infraestructura.</p>
+            </div>
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Evaluación Inicial</h3>
+                    <p>Análisis completo de la infraestructura actual y requerimientos específicos.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Detección de Vulnerabilidades</h3>
+                    <p>Identificación de puntos débiles utilizando herramientas avanzadas y metodologías probadas.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Análisis de Riesgos</h3>
+                    <p>Evaluación del impacto potencial y probabilidad de explotación de vulnerabilidades.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Implementación de Soluciones</h3>
+                    <p>Desarrollo y aplicación de medidas correctivas y preventivas.</p>
                 </div>
             </div>
-        </article>
+        </div>
+    </section>
 
-        <aside class="sidebar">
-            <div class="author-info">
-                <img src="../assets/images/profile.jpg" alt="Foto de perfil">
-                <h3>Tu Nombre</h3>
-                <p>Profesional en Ciberseguridad especializado en pentesting y análisis de vulnerabilidades.</p>
-                <div class="author-social">
-                    <a href="#"><i class="fab fa-github"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>Sobre Nosotros</h2>
+                <p>Somos un equipo de expertos en ciberseguridad con amplia experiencia en protección de infraestructuras críticas.</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>En SecureNet, nos dedicamos a proporcionar soluciones de seguridad de red de primera clase para empresas de todos los tamaños. Nuestro equipo está compuesto por profesionales certificados con experiencia en diversas industrias y áreas de especialización en ciberseguridad.</p>
+                    <p>Entendemos que cada organización tiene necesidades únicas, por lo que adaptamos nuestros servicios para satisfacer sus requisitos específicos, ayudándole a proteger sus activos digitales más valiosos contra las amenazas emergentes.</p>
+                    <p>Nuestro compromiso es mantener su infraestructura segura, permitiéndole concentrarse en sus operaciones comerciales con tranquilidad.</p>
+                </div>
+                <div class="about-image">
+                    <img src="/api/placeholder/600/400" alt="Equipo de SecureNet">
                 </div>
             </div>
+        </div>
+    </section>
 
-            <div class="related-writeups">
-                <h3>Write-Ups Relacionados</h3>
-                <ul>
-                    <li><a href="#">Explotación de XSS en Aplicación Web</a></li>
-                    <li><a href="#">Bypass de Autenticación en Portal de Servicios</a></li>
-                    <li><a href="#">Análisis de Seguridad en API REST</a></li>
-                </ul>
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>¿Por Qué Elegirnos?</h2>
+                <p>Ofrecemos ventajas significativas que nos distinguen en el campo de la ciberseguridad.</p>
             </div>
-        </aside>
-    </main>
-
-    <footer>
-        <p>&copy; 2025 Mi Portafolio de Ciberseguridad. Todos los derechos reservados.</p>
-    </footer>
-
-    <!-- Scripts -->
+            <div class="features-grid">
+                <div class="feature">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M11 5.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1z"/>
+                            <path d="M2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H2zm13 2v5H1V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1zm-1 9H2a1 1 0 0 1-1-1v-1h14v1a1 1 0 0 1-1 1z"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3>Tecnología Avanzada</h3>
+                        <p>Utilizamos las herramientas y metodologías más actualizadas del mercado para proporcionar evaluaciones precisas y exhaustivas.</p>
+                    </div>
+                </div>
+                </div>
+        </div>
+    </section>
     <script src="/js/main.js"></script>
     <script src="../lib/prism/prism.js"></script>
 </body>
