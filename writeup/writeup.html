@@ -42,9 +42,10 @@
                 <h1>Título del Write-Up</h1>
                 <div class="author">Por: Julieth Botello</div>
             </div>
-                <div class="toc">
+            <div class="toc">
                     <h2>Tabla de Contenidos</h2>
                     <div class="toc-content">
+                    
                         <ul>
                             <li><a href="#introduccion">Introducción</a></li>
                             <li><a href="#reconocimiento">Reconocimiento</a></li>
@@ -55,7 +56,7 @@
                             <li><a href="#conclusion">Conclusión</a></li>
                         </ul>
                     </div>   
-                </div>              
+            </div>              
             
             <section id="introduccion">
                 <h2>Introducción</h2>
@@ -82,14 +83,14 @@
                 <p>Resultados del escaneo con herramientas como Nmap.</p>
                 
                 <pre><code class="language-bash">$ nmap -sV -sC -p- 10.10.10.10
-Starting Nmap 7.92 ( https://nmap.org )
-Nmap scan report for target.com (10.10.10.10)
-Host is up (0.023s latency).
-Not shown: 65530 closed ports
-PORT    STATE SERVICE  VERSION
-22/tcp  open  ssh      OpenSSH 8.2p1
-80/tcp  open  http     Apache httpd 2.4.46
-443/tcp open  https    Apache httpd 2.4.46
+                Starting Nmap 7.92 ( https://nmap.org )
+                Nmap scan report for target.com (10.10.10.10)
+                Host is up (0.023s latency).
+                Not shown: 65530 closed ports
+                PORT    STATE SERVICE  VERSION
+                22/tcp  open  ssh      OpenSSH 8.2p1
+                80/tcp  open  http     Apache httpd 2.4.46
+                443/tcp open  https    Apache httpd 2.4.46
 </code></pre>
 
                 <h3>Enumeración Web</h3>
