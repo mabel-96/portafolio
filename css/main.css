@@ -145,7 +145,21 @@ nav {
 
 .hero-content {
     max-width: 800px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap; /* Para que se adapte en móvil */
 }
+.hero-image img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid var(--primary-color);
+    box-shadow: 0 0 15px rgba(0, 255, 65, 0.3);
+}
+
 
 .hero h2 {
     font-size: 3rem;
@@ -399,3 +413,7 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
+
+
+
