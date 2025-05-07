@@ -146,11 +146,12 @@ nav {
 .hero-content {
     max-width: 800px;
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
     flex-wrap: wrap; /* Para que se adapte en móvil */
+    flex-direction: column;  /* Asegura que el contenido se apile verticalmente */
+    align-items: center;     /* Centra el contenido horizontalmente */
+    justify-content: center; /* Centra el contenido verticalmente */
+    gap: 20px;               /* Espacio entre los elementos */
+    text-align: center;      /* Centra el texto */
 }
 .hero-image img {
     width: 100px;
