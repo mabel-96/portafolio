@@ -155,6 +155,7 @@ nav {
 }
 
 /* Secciones */
+/*secion de pantalla*/
 section {
     padding: var(--section-padding);
     max-width: 1200px;
@@ -335,4 +336,56 @@ footer {
     padding: 20px;
     background-color: var(--darker-bg);
     border-top: 1px solid rgba(0, 255, 65, 0.2);
+}
+/* Menú móvil: ocultar por defecto */
+/* Mostrar el menú al hacer clic en el icono de hamburguesa */
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+/* Estilos del menú en pantallas pequeñas */
+@media (max-width: 768px) {
+    .menu {
+        display: none; /* Esconde el menú */
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+        background-color: var(--dark-bg);
+        position: absolute;
+        top: var(--header-height);
+        left: 0;
+        padding: 20px;
+        z-index: 999;
+    }
+
+    .menu-toggle {
+        display: block;
+        color: var(--light-text);
+    }
+
+    .menu a {
+        font-size: 1.2rem;
+        padding: 10px 0;
+    }
+}
+/* Menú visible */
+.menu-visible {
+    display: flex !important;
+}
+/* Estilos para pantallas más pequeñas */
+@media (max-width: 768px) {
+    section {
+        padding: 60px 15px;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-content {
+        grid-template-columns: 1fr;
+    }
 }
