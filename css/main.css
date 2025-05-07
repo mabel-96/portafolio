@@ -349,26 +349,27 @@ footer {
 /* Estilos del menú en pantallas pequeñas */
 @media (max-width: 768px) {
     .menu {
-        display: none; /* Esconde el menú */
+        display: none;
         flex-direction: column;
-        gap: 20px;
-        width: 100%;
-        background-color: var(--dark-bg);
+        gap: 10px;
+        background-color: var(--darker-bg);
         position: absolute;
         top: var(--header-height);
-        left: 0;
+        right: 0;
+        width: 200px;
         padding: 20px;
+        border-left: 1px solid var(--primary-color);
+        border-bottom: 1px solid var(--primary-color);
         z-index: 999;
+    }
+
+    .menu.active {
+        display: flex;
     }
 
     .menu-toggle {
         display: block;
-        color: var(--light-text);
-    }
-
-    .menu a {
-        font-size: 1.2rem;
-        padding: 10px 0;
+        color: var(--primary-color);
     }
 }
 /* Menú visible */
