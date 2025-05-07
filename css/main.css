@@ -144,25 +144,23 @@ nav {
 }
 
 .hero-content {
-    
     display: flex;
-    flex-wrap: wrap; /* Para que se adapte en móvil */
-    align-items: center;     /* Centra el contenido horizontalmente */
-    justify-content: center; /* Centra el contenido verticalmente */
-    gap: 20px;               /* Espacio entre los elementos */
-    
+    flex-direction: column;   /* Asegura que el contenido se apile verticalmente */
+    align-items: center;      /* Centra el contenido horizontalmente */
+    justify-content: center;  /* Centra el contenido verticalmente */
+    text-align: center;       /* Centra el texto */
+    gap: 20px;                /* Espacio entre los elementos */
 }
+
 .hero-image img {
-    
-    width: 180px;
-    height: 180px;
+    width: 140px;
+    height: 140px;
     object-fit: cover;
     border-radius: 50%;
     border: 2px solid var(--primary-color);
     box-shadow: 0 0 10px rgba(0, 255, 65, 0.3);
-    margin-bottom: 20px; /* Espacio abajo de la imagen */
+    margin-top: 20px;         /* Añadimos un poco de espacio encima de la imagen */
 }
-
 
 .hero h2 {
     font-size: 3rem;
