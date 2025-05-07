@@ -76,13 +76,18 @@ nav {
     height: var(--header-height);
     max-width: 1200px;
     margin: 0 auto;
+    flex-wrap: wrap; /* ✅ para evitar desbordamientos */
 }
 
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+.logo h1 {
+    font-size: 1rem; /* ✅ más pequeño para pantallas pequeñas */
+    color: var(--primary-color);
+    white-space: nowrap; /* ✅ evita que se parta en dos líneas */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 150px;
 }
+
 
 .logo img {
     height: 40px;
@@ -348,6 +353,10 @@ footer {
 
 /* Estilos del menú en pantallas pequeñas */
 @media (max-width: 768px) {
+    .logo h1 {
+        font-size: 0.9rem;
+        max-width: 120px; /* Reduce aún más en móviles */
+    }
     .menu {
         display: none;
         flex-direction: column;
