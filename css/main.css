@@ -147,15 +147,6 @@ nav {
     
     display: flex;
     flex-wrap: wrap; /* Para que se adapte en móvil */
-    justify-content: center; /* Centra el contenido horizontalmente */
-    align-items: center; /* Centra el contenido verticalmente */    
-    gap: 20px; /* Espacio entre los elementos */
-    max-width: 800px; /* Limita el ancho del contenido */
-    margin: 0 auto; /* Centra el contenido en la pantalla */
-    padding: 20px; /* Espacio interno */
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
-    border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0 0 20px rgba(0, 255, 65, 0.5); /* Sombra alrededor del contenido */
     align-items: center;     /* Centra el contenido horizontalmente */
     justify-content: center; /* Centra el contenido verticalmente */
     gap: 20px;               /* Espacio entre los elementos */
