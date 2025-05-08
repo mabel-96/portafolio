@@ -461,37 +461,51 @@ footer {
         grid-template-columns: 1fr;
     }
 }
-/*Estilos para estudios*/
-.studies-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    margin-top: 30px;
+/* Estilos para la sección de estudios */
+#estudios {
+    padding: var(--section-padding);
 }
 
-.study-item {
-    background-color: var(--darker-bg);
-    padding: 20px;
-    border-radius: 8px;
-    border: 1px solid rgba(0, 255, 65, 0.2);
-    box-shadow: 0 0 10px rgba(0, 255, 65, 0.05);
-    transition: transform 0.3s ease;
-}
-
-.study-item:hover {
-    transform: translateY(-5px);
-    border-color: var(--primary-color);
-}
-
-.study-item h3 {
+#estudios h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
     color: var(--primary-color);
-    margin-bottom: 10px;
 }
+
+.estudios-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas iguales en pantallas grandes */
+    gap: 30px;
+    justify-items: center;
+}
+
+.estudio {
+    background-color: var(--darker-bg);
+    border: 1px solid rgba(0, 255, 65, 0.2);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.estudio h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.estudio p {
+    color: #aaa;
+    font-size: 1rem;
+}
+
 @media (max-width: 768px) {
     .estudios-content {
-        grid-template-columns: 1fr; /* Se ajusta a una columna en pantallas pequeñas */
+        grid-template-columns: 1fr; /* Ajuste a una sola columna en pantallas más pequeñas */
     }
 }
+
 @media (min-width: 769px) {
     .estudios-content {
         grid-template-columns: repeat(3, 1fr); /* Tres columnas en pantallas grandes */
