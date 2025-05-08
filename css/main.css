@@ -255,6 +255,12 @@ section h2:after {
     border-radius: 4px;
     transition: width 1s ease-in-out;
 }
+.progress .percentage {
+    color: white; /* Antes estaba en negro (#000) */
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
 .progress span {
     position: relative;
     z-index: 1;
