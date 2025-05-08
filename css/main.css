@@ -85,7 +85,7 @@ nav {
     white-space: nowrap; /* ✅ evita que se parta en dos líneas */
     overflow: hidden;
     text-overflow: ellipsis;
-    max-width: 150px;
+    max-width: 120px;
 }
 
 
@@ -162,8 +162,8 @@ nav {
 }
 
 .hero-image img {
-    width: 150px;
-    height: 150px;
+    width: 180px;
+    height: 180px;
     object-fit: cover;
     border-radius: 50%;
     border: 2px solid var(--primary-color);
@@ -219,7 +219,41 @@ section h2:after {
 .about-text p {
     margin-bottom: 20px;
 }
+/* Skills habilidades */
+.skills {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
 
+.skill {
+    font-size: 1rem;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    color: var(--light-text);
+}
+
+.skill i {
+    margin-right: 8px;
+    color: var(--primary-color);
+}
+
+.progress-bar {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    height: 10px;
+    margin-top: 5px;
+}
+
+.progress {
+    background-color: var(--primary-color);
+    height: 100%;
+    border-radius: 4px;
+    transition: width 1s ease-in-out;
+}
+/* Skills list 
 .skills ul {
     list-style: none;
 }
@@ -234,7 +268,7 @@ section h2:after {
     color: var(--primary-color);
     margin-right: 10px;
 }
-
+*/
 /* Write-ups */
 .writeups-grid {
     display: grid;
