@@ -313,7 +313,10 @@ section h2:after {
     border: 1px solid rgba(0, 255, 65, 0.2);
     box-shadow: 0 0 10px rgba(0, 255, 65, 0.05);
     transition: transform 0.3s ease;
-    text-align: center; /* Centrar el texto */
+    display: flex;
+    flex-direction: column; /* Asegura que el contenido se apile verticalmente */
+    align-items: center; /* Centra todo el contenido dentro del .exp-item */
+    text-align: center; /* Centra el texto */
 }
 
 .exp-item:hover {
@@ -325,7 +328,8 @@ section h2:after {
     font-size: 2rem;
     color: var(--primary-color);
     margin-bottom: 10px;
-    margin: 0 auto; /* Centrar el icono */
+    display: block; /* Hace que el icono sea un bloque */
+    margin: 0 auto; /* Centra el icono */
 }
 
 .exp-item h3 {
@@ -338,7 +342,9 @@ section h2:after {
 .exp-item p {
     font-size: 1rem;
     color: #aaa;
+    text-align: center; /* Centra el texto en el párrafo */
 }
+
 /* Write-ups */
 .writeups-grid {
     display: grid;
