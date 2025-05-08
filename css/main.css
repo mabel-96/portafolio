@@ -243,7 +243,7 @@ section h2:after {
 
 .progress-bar {
     width: 100%;
-    background-color: rgba(240, 235, 235, 0.938);
+    background-color: rgba(6, 230, 36, 0.938);
     border-radius: 4px;
     height: 10px;
     margin-top: 5px;
@@ -259,7 +259,7 @@ section h2:after {
 .progress span {
     position: relative;
     z-index: 1;
-    background-color: rgba(240, 235, 235, 0.938);
+    
 }
 @keyframes fillBar {
     from {
