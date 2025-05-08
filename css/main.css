@@ -307,11 +307,13 @@ section h2:after {
 }
 
 .exp-list {
-    display: flex;
+    display: grid;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 30px;
     margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
 }
 
 .exp-item {
