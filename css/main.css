@@ -222,7 +222,7 @@ section h2:after {
 /* Skills habilidades */
 .skill {
     width: 100%;
-    margin-bottom: 70px; /* aumenta separación entre habilidades */
+    margin-bottom: 60px; /* aumenta separación entre habilidades */
     max-width: 600px;
     margin: 0 auto;
 }
@@ -232,7 +232,7 @@ section h2:after {
 }
 
 .progress-bar {
-    margin-bottom: 30px;
+    
     padding: 3px; /* opcional, da una sensación de relleno interno */
     background-color: rgba(25, 26, 25, 0.938); /* Mantiene el fondo oscuro */
     border-radius: 20px;
