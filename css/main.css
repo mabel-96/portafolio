@@ -492,6 +492,12 @@ footer {
         grid-template-columns: 1fr; /* Se ajusta a una columna en pantallas pequeñas */
     }
 }
-
+@media (min-width: 769px) {
+    .estudios-content {
+        grid-template-columns: repeat(3, 1fr); /* Tres columnas en pantallas grandes */
+        max-width: 1200px;
+        margin: 0 auto; /* Centra la sección */
+    }
+}
 
 
