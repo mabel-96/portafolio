@@ -262,7 +262,16 @@ section h2:after {
     font-size: 0.8rem;
     font-weight: bold;
 }
+@media (max-width: 768px) {
+    .skill {
+        max-width: 100%; /* Ocupa todo el ancho en pantallas pequeñas */
+        margin-bottom: 40px; /* Reduce el margen inferior en pantallas pequeñas */
+    }
 
+    .progress-text {
+        font-size: 0.7rem; /* Ajusta el tamaño del texto en pantallas más pequeñas */
+    }
+}
 
  
 /* Write-ups */
