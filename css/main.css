@@ -230,6 +230,7 @@ section h2:after {
 }
 
 .progress-bar {
+    padding: 3px; /* opcional, da una sensación de relleno interno */
     background-color: rgba(25, 26, 25, 0.938); /* Mantiene el fondo oscuro */
     border-radius: 20px;
     overflow: hidden;
