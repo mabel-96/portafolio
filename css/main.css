@@ -461,7 +461,59 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+/*Estilos para estudios*/
+<section id="estudios">
+  <h2>Estudios</h2>
+  <div class="studies-list">
+    <div class="study-item">
+      <h3>Bachiller Académico</h3>
+      <p><strong>Institución:</strong> I.E. Enrique Olaya Herrera</p>
+      <p><strong>Ciudad:</strong> Neiva - Huila</p>
+      <p><strong>Año:</strong> Culminado 2013</p>
+    </div>
+    <div class="study-item">
+      <h3>Técnico en Sistemas</h3>
+      <p><strong>Institución:</strong> SENA - Servicio Nacional de Aprendizaje</p>
+      <p><strong>Ciudad:</strong> Neiva - Huila</p>
+      <p><strong>Año:</strong> Culminado 2014</p>
+    </div>
+    <div class="study-item">
+      <h3>Ingeniería de Sistemas</h3>
+      <p><strong>Institución:</strong> Corporación Unificada Nacional de Educación Superior (CUN)</p>
+      <p><strong>Ciudad:</strong> Bogotá</p>
+      <p><strong>Estado:</strong> En curso</p>
+    </div>
+  </div>
+</section>
+🎨 CSS (agrega esto al final de tu main.css)
+css
+Copiar
+Editar
+.studies-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
 
+.study-item {
+    background-color: var(--darker-bg);
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 255, 65, 0.2);
+    box-shadow: 0 0 10px rgba(0, 255, 65, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.study-item:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-color);
+}
+
+.study-item h3 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
 
 
 
