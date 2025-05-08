@@ -220,6 +220,9 @@ section h2:after {
     margin-bottom: 20px;
 }
 /* Skills habilidades */
+.skills {
+    margin: 20px;
+}
 .skill {
     width: 100%;
     margin-bottom: 60px; /* aumenta separación entre habilidades */
