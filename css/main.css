@@ -151,7 +151,11 @@ nav {
     text-align: center;       /* Centra el texto */
     gap: 20px;                /* Espacio entre los elementos */
 }
-
+.hero-image {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center;    /* Centra verticalmente */
+}
 .hero-image img {
     width: 140px;
     height: 140px;
