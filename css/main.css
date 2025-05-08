@@ -220,6 +220,23 @@ section h2:after {
     margin-bottom: 20px;
 }
 /* Skills habilidades */
+.progress {
+    background-color: var(--primary-color);
+    height: 100%;
+    position: relative;
+    border-radius: 20px;
+    transition: width 1.5s ease-in-out;
+}
+
+.progress-text {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
 .skills {
     display: flex;
     flex-direction: column;
