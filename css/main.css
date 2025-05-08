@@ -299,14 +299,11 @@ section h2:after {
     margin-bottom: 10px;
 }
 /* Experiencia */
-
-
 .exp-list {
     display: grid;
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 30px;
-    display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 30px;
 }
