@@ -220,8 +220,20 @@ section h2:after {
     margin-bottom: 20px;
 }
 /* Skills habilidades */
+.skill-title i {
+    font-size: 1.6rem;
+    color: var(--primary-color);
+}
+
+.progress-bar {
+    background-color: rgba(25, 26, 25, 0.938); /* Mantiene el fondo oscuro */
+    border-radius: 20px;
+    overflow: hidden;
+    height: 20px;
+}
+
 .progress {
-    background-color: var(--primary-color);
+    background-color: var(--primary-color); /* Verde terminal */
     height: 100%;
     position: relative;
     border-radius: 20px;
@@ -233,56 +245,11 @@ section h2:after {
     right: 10px;
     top: 50%;
     transform: translateY(-50%);
-    color: white;
+    color: var(--light-text); /* Blanco */
     font-size: 0.8rem;
     font-weight: bold;
 }
-.skills {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-}
 
-.skill {
-    width: 100%;
-}
-
-.skill-title {
-    font-weight: bold;
-    margin-bottom: 5px;
-    font-size: 1.1rem;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.skill-title i {
-    font-size: 1.4rem;
-    color: var(--primary-color);
-}
-
-.progress-bar {
-    background-color: #222;
-    border-radius: 20px;
-    overflow: hidden;
-    height: 20px;
-}
-
-.progress {
-    background-color: var(--primary-color);
-    height: 100%;
-    width: 0;
-    animation: fillBar 1.5s ease-in-out forwards;
-}
-
-@keyframes fillBar {
-    from {
-        width: 0;
-    }
-    to {
-        width: var(--width);
-    }
-}
 
  
 /* Write-ups */
