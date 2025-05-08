@@ -243,14 +243,14 @@ section h2:after {
 
 .progress-bar {
     width: 100%;
-    background-color: rgba(240, 11, 11, 0.89);
+    background-color: rgba(240, 235, 235, 0.938);
     border-radius: 4px;
     height: 10px;
     margin-top: 5px;
 }
 
 .progress {
-    background-color: var(--primary-color);
+    background-color: var(--light-text);
     height: 100%;
     border-radius: 4px;
     transition: width 1s ease-in-out;
