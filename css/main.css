@@ -255,6 +255,14 @@ section h2:after {
     border-radius: 4px;
     transition: width 1s ease-in-out;
 }
+@keyframes fillBar {
+    from {
+        width: 0;
+    }
+    to {
+        width: var(--width);
+    }
+}
 /* Skills list 
 .skills ul {
     list-style: none;
