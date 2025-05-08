@@ -309,7 +309,7 @@ section h2:after {
 .exp-item {
     background-color: var(--darker-bg);
     padding: 20px;
-    border-radius: 8px;
+    border-radius: 18px;
     border: 1px solid rgba(0, 255, 65, 0.2);
     box-shadow: 0 0 10px rgba(0, 255, 65, 0.05);
     transition: transform 0.3s ease;
