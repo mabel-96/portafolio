@@ -223,44 +223,41 @@ section h2:after {
 .skills {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 25px;
 }
 
 .skill {
-    font-size: 1rem;
+    width: 100%;
+}
+
+.skill-title {
     font-weight: bold;
-    
-    flex-direction: column;
-    color: var(--primary-color);
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-.skill i {
-    font-size: 1.5rem; /* Tamaño del ícono */
-    margin-right: 10px;
+.skill-title i {
+    font-size: 1.4rem;
     color: var(--primary-color);
 }
-
 
 .progress-bar {
-    width: 100%;
-    background-color: rgba(6, 230, 36, 0.938);
-    border-radius: 4px;
-    height: 10px;
-    margin-top: 5px;
+    background-color: #222;
+    border-radius: 20px;
+    overflow: hidden;
+    height: 20px;
 }
 
 .progress {
-    background-color: var(--light-text);
+    background-color: var(--primary-color);
     height: 100%;
-    border-radius: 4px;
-    transition: width 1s ease-in-out;
+    width: 0;
+    animation: fillBar 1.5s ease-in-out forwards;
 }
 
-.progress span {
-    position: relative;
-    z-index: 1;
-    
-}
 @keyframes fillBar {
     from {
         width: 0;
@@ -269,6 +266,7 @@ section h2:after {
         width: var(--width);
     }
 }
+
  
 /* Write-ups */
 .writeups-grid {
