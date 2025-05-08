@@ -298,6 +298,37 @@ section h2:after {
     color: var(--primary-color);
     margin-bottom: 10px;
 }
+/* Experiencia */
+.experiencia {
+    padding: 60px 20px;
+    background-color: #111;
+    color: #fff;
+    text-align: center;
+}
+
+.exp-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.exp-item {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: left;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+.exp-item i {
+    color: #0f0;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
 /* Write-ups */
 .writeups-grid {
     display: grid;
@@ -343,36 +374,6 @@ section h2:after {
     color: #aaa;
 }
 
-/* Experiencia */
-.experiencia {
-    padding: 60px 20px;
-    background-color: #111;
-    color: #fff;
-    text-align: center;
-}
-
-.exp-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 30px;
-}
-
-.exp-item {
-    background-color: #222;
-    padding: 20px;
-    border-radius: 10px;
-    width: 300px;
-    text-align: left;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-}
-
-.exp-item i {
-    color: #0f0;
-    font-size: 24px;
-    margin-bottom: 10px;
-}
 
 /*
 .cert-list {
