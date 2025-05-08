@@ -487,6 +487,11 @@ footer {
     color: var(--primary-color);
     margin-bottom: 10px;
 }
+@media (max-width: 768px) {
+    .estudios-content {
+        grid-template-columns: 1fr; /* Se ajusta a una columna en pantallas pequeñas */
+    }
+}
 
 
 
