@@ -223,6 +223,8 @@ section h2:after {
 .skill {
     width: 100%;
     margin-bottom: 30px; /* aumenta separación entre habilidades */
+    max-width: 600px;
+    margin: 0 auto;
 }
 .skill-title i {
     font-size: 1.6rem;
