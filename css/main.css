@@ -274,12 +274,31 @@ section h2:after {
 }
 /*stilos estudios*/
 /* Estilos generales */
-.education-list {
+.studies-list {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
-} 
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
 
+.study-item {
+    background-color: var(--darker-bg);
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 255, 65, 0.2);
+    box-shadow: 0 0 10px rgba(0, 255, 65, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.study-item:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-color);
+}
+
+.study-item h3 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
 /* Write-ups */
 .writeups-grid {
     display: grid;
