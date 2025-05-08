@@ -243,7 +243,7 @@ section h2:after {
 
 .progress-bar {
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.89);
+    background-color: rgba(240, 11, 11, 0.89);
     border-radius: 4px;
     height: 10px;
     margin-top: 5px;
@@ -268,22 +268,7 @@ section h2:after {
         width: var(--width);
     }
 }
-/* Skills list 
-.skills ul {
-    list-style: none;
-}
 
-.skills li {
-    padding: 8px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.skills li:before {
-    content: '>';
-    color: var(--primary-color);
-    margin-right: 10px;
-}
-*/
 /* Write-ups */
 .writeups-grid {
     display: grid;
