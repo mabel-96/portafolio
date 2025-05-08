@@ -255,6 +255,10 @@ section h2:after {
     border-radius: 4px;
     transition: width 1s ease-in-out;
 }
+.progress span {
+    position: relative;
+    z-index: 1;
+}
 @keyframes fillBar {
     from {
         width: 0;
