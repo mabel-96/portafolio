@@ -238,6 +238,7 @@ section h2:after {
     border-radius: 20px;
     overflow: hidden;
     height: 20px;
+    margin-bottom: 10px; /* Espacio después de la barra */
 }
 
 .progress {
