@@ -229,7 +229,7 @@ section h2:after {
 .skill {
     font-size: 1rem;
     font-weight: bold;
-    display: flex;
+    
     flex-direction: column;
     color: var(--light-text);
 }
