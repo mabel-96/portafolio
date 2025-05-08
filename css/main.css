@@ -235,9 +235,11 @@ section h2:after {
 }
 
 .skill i {
-    margin-right: 8px;
+    font-size: 1.5rem; /* Tamaño del ícono */
+    margin-right: 10px;
     color: var(--primary-color);
 }
+
 
 .progress-bar {
     width: 100%;
