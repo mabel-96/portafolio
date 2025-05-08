@@ -152,9 +152,8 @@ nav {
     gap: 20px;                /* Espacio entre los elementos */
 }
 .hero-image {
-    display: flex;
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center;    /* Centra verticalmente */
+    display: grid;
+    place-items: center; /* Centra horizontal y verticalmente */
 }
 .hero-image img {
     width: 140px;
