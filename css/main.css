@@ -220,6 +220,10 @@ section h2:after {
     margin-bottom: 20px;
 }
 /* Skills habilidades */
+.skill {
+    width: 100%;
+    margin-bottom: 30px; /* aumenta separación entre habilidades */
+}
 .skill-title i {
     font-size: 1.6rem;
     color: var(--primary-color);
