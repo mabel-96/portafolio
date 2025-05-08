@@ -272,45 +272,7 @@ section h2:after {
         font-size: 0.7rem; /* Ajusta el tamaño del texto en pantallas más pequeñas */
     }
 }
-/* Estilos para la sección de estudios */
-#estudios {
-    padding: var(--section-padding);
-}
 
-#estudios h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 50px;
-    color: var(--primary-color);
-}
-
-.estudios-content {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Tres columnas iguales en pantallas grandes */
-    gap: 30px;
-    justify-items: center;
-}
-
-.estudio {
-    background-color: var(--darker-bg);
-    border: 1px solid rgba(0, 255, 65, 0.2);
-    border-radius: 8px;
-    padding: 20px;
-    text-align: center;
-    transition: all 0.3s ease;
-}
-
-.estudio h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    color: var(--primary-color);
-}
-
-.estudio p {
-    color: #aaa;
-    font-size: 1rem;
-}
- 
 /* Write-ups */
 .writeups-grid {
     display: grid;
