@@ -227,6 +227,7 @@ section h2:after {
     margin: 0 auto;
 }
 .skill-title i {
+    width: 100%;
     font-size: 1.6rem;
     color: var(--primary-color);
 }
@@ -248,7 +249,7 @@ section h2:after {
 }
 
 .progress-text {
-    width: 100%;
+    
     position: absolute;
     right: 10px;
     top: 50%;
