@@ -272,7 +272,7 @@ section h2:after {
         font-size: 0.7rem; /* Ajusta el tamaño del texto en pantallas más pequeñas */
     }
 }
-/* Estilos generales */
+/* Estilos studio */
 .studies-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -301,19 +301,17 @@ section h2:after {
 /* Experiencia */
 .exp-list {
     display: grid;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 30px;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
+    margin-top: 30px;
 }
 .exp-item {
-    background-color: #222;
+    background-color: var(--darker-bg);
     padding: 20px;
-    border-radius: 10px;
-    width: 300px;
-    text-align: left;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    border-radius: 8px;
+    border: 1px solid rgba(0, 255, 65, 0.2);
+    box-shadow: 0 0 10px rgba(0, 255, 65, 0.05);
+    transition: transform 0.3s ease;
 }
 
 .exp-item i {
@@ -367,29 +365,6 @@ section h2:after {
     margin-bottom: 20px;
     color: #aaa;
 }
-
-
-/*
-.cert-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-.cert-item {
-    background-color: var(--darker-bg);
-    padding: 20px;
-    border-radius: 8px;
-    text-align: center;
-    border: 1px solid rgba(0, 255, 65, 0.2);
-}
-
-.cert-item i {
-    font-size: 2rem;
-    color: var(--primary-color);
-    margin-bottom: 10px;
-}
-*/
 /* Contacto */
 .contact-content {
     display: grid;
