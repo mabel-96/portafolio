@@ -132,18 +132,21 @@ nav {
 
 /* Sección Hero */
 .hero {
-    height: 100vh;
+    min-height: 100vh; /* Asegura que ocupe al menos la altura de la pantalla */
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: center; /* Centra verticalmente */
+    align-items: center;      /* Centra horizontalmente */
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../assets/images/cyber-bg.jpg');
     background-size: cover;
     background-position: center;
     text-align: center;
     padding: var(--section-padding);
+    padding-top: calc(var(--header-height) + 40px); /* Espacio debajo del header */
 }
 
-..hero-content {
+
+.hero-content {
     display: flex;
     flex-direction: column;
     align-items: center; /* Asegura el centrado horizontal */
