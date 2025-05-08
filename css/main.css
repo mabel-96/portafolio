@@ -243,7 +243,7 @@ section h2:after {
 
 .progress-bar {
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.89);
     border-radius: 4px;
     height: 10px;
     margin-top: 5px;
@@ -254,11 +254,6 @@ section h2:after {
     height: 100%;
     border-radius: 4px;
     transition: width 1s ease-in-out;
-}
-.progress .percentage {
-    color: white; /* Antes estaba en negro (#000) */
-    font-weight: bold;
-    font-size: 0.9rem;
 }
 
 .progress span {
