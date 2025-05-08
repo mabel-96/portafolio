@@ -500,18 +500,5 @@ footer {
     font-size: 1rem;
 }
 
-@media (max-width: 768px) {
-    .estudios-content {
-        grid-template-columns: 1fr; /* Ajuste a una sola columna en pantallas más pequeñas */
-    }
-}
-
-@media (min-width: 769px) {
-    .estudios-content {
-        grid-template-columns: repeat(3, 1fr); /* Tres columnas en pantallas grandes */
-        max-width: 1200px;
-        margin: 0 auto; /* Centra la sección */
-    }
-}
 
 
