@@ -219,7 +219,7 @@ section h2:after {
 .about-text p {
     margin-bottom: 20px;
 }
-/* Skills habilidades */
+/* Skills habilidades 
 .skills {
     display: flex;
     flex-direction: column;
@@ -235,7 +235,7 @@ section h2:after {
 }
 
 .skill i {
-    font-size: 1.5rem; /* Tamaño del ícono */
+    font-size: 1.5rem; /* Tamaño del ícono 
     margin-right: 10px;
     color: var(--primary-color);
 }
@@ -268,7 +268,40 @@ section h2:after {
         width: var(--width);
     }
 }
-
+*/
+.skill-bar {
+    margin-bottom: 20px;
+  }
+  
+  .skill-title {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: white;
+  }
+  
+  .progress {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    overflow: hidden;
+    height: 25px;
+  }
+  
+  .progress-fill {
+    background-color: var(--primary-color);
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 10px;
+    transition: width 0.6s ease;
+  }
+  
+  .percentage {
+    color: white;
+    font-weight: bold;
+  }
+  
 /* Write-ups */
 .writeups-grid {
     display: grid;
