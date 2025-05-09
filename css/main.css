@@ -394,6 +394,7 @@ section h2:after {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 40px;
     text-align: center;
 }
@@ -406,6 +407,7 @@ section h2:after {
     box-shadow: 0 0 10px rgba(0, 255, 65, 0.05);
     transition: transform 0.3s ease;
     max-width: 320px;
+    color: #aaa; /* ✅ Coincide con el estilo general de texto */
 }
 
 .qr-card:hover {
@@ -418,45 +420,6 @@ section h2:after {
     border-radius: 6px;
     margin-bottom: 15px;
 }
-/* Contacto 
-.contact-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-}
-
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.form-group {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
-.form-group label {
-    font-weight: bold;
-}
-
-.form-group input,
-.form-group textarea {
-    padding: 10px;
-    background-color: var(--darker-bg);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    color: var(--light-text);
-    border-radius: 4px;
-    font-family: inherit;
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-    outline: none;
-    border-color: var(--primary-color);
-}
-
 .social-links {
     display: flex;
     flex-direction: column;
@@ -474,7 +437,7 @@ section h2:after {
 .social-links a i {
     width: 20px;
 }
-*/
+
 /* Footer */
 footer {
     text-align: center;
