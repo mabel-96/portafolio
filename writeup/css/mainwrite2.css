@@ -18,14 +18,15 @@ body {
 /* VARIABLES */
 
 :root {
-  --primary-color: #00d400; /* Verde ciberseguridad (el color principal) */
-  --secondary-color: #079653; /* Azul tecnológico */
-  --dark-bg: #121212; /* Fondo oscuro */
+  --primary-color: #00ff41; /* Verde terminal */
+  --secondary-color: #007acc; /* Azul tecnológico */
+  --dark-bg: #0a0a0a; /* Fondo oscuro */
   --darker-bg: #050505; /* Fondo más oscuro */
-  --light-text: #f4f4f4; /* Texto claro */
+  --light-text: #f0f0f0; /* Texto claro */
   --header-height: 70px;
   --section-padding: 80px 20px;
 }
+
 
 /* HEADER */
 header {
