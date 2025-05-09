@@ -392,11 +392,13 @@ section h2:after {
 /*estilos de contactos*/
 .qr-only {
     display: flex;
-    flex-direction: column;
+    flex-direction: row; /* lado a lado */
     align-items: center;
     justify-content: center;    
     gap: 40px;
+    flex-wrap: wrap; /* para que en pantallas pequeñas se acomode vertical */
     text-align: center;
+    margin-top: 40px;
 }
 
 .qr-card {
