@@ -79,6 +79,37 @@ nav .menu a {
 nav .menu a:hover {
   color: var(--primary-color);
 }
+.menu {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.menu a {
+  color: var(--light-text);
+  position: relative;
+}
+
+.menu a:after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--primary-color);
+  transition: width 0.3s ease;
+}
+
+.menu a:hover:after {
+  width: 100%;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
 
 /* HERO SECTION */
 .hero {
