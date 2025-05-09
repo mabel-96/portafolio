@@ -17,8 +17,8 @@ body {
 
 /* VARIABLES */
 :root {
-  --primary-color: #00bcd4; /* Verde ciberseguridad (el color principal) */
-  --secondary-color: #007acc; /* Azul tecnológico */
+  --primary-color: #00d400; /* Verde ciberseguridad (el color principal) */
+  --secondary-color: #079653; /* Azul tecnológico */
   --dark-bg: #121212; /* Fondo oscuro */
   --darker-bg: #050505; /* Fondo más oscuro */
   --light-text: #f4f4f4; /* Texto claro */
@@ -107,7 +107,7 @@ nav .menu a:hover {
 }
 
 .hero .btn:hover {
-  background-color: #0097a7;
+  background-color: #0bd347;
 }
 
 .hero .btn-outline {
