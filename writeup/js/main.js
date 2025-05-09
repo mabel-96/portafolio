@@ -5,7 +5,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (menuToggle && menu) {
         menuToggle.addEventListener('click', function() {
-            menu.classList.toggle('menu-visible');
+            menu.classList.toggle('active');
         });
     }
 });
+// Scroll suave
