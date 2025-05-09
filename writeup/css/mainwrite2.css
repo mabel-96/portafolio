@@ -344,3 +344,61 @@ footer {
   color: #aaa;
   border-top: 1px solid var(--primary-color);
 }
+@media (max-width: 768px) {
+  .skill {
+      max-width: 100%; /* Ocupa todo el ancho en pantallas pequeñas */
+      margin-bottom: 40px; /* Reduce el margen inferior en pantallas pequeñas */
+  }
+
+  .progress-text {
+      font-size: 0.7rem; /* Ajusta el tamaño del texto en pantallas más pequeñas */
+  }
+}
+/* Estilos del menú en pantallas pequeñas */
+@media (max-width: 768px) {
+  .logo h1 {
+      font-size: 0.9rem;
+      max-width: 120px; /* Reduce aún más en móviles */
+  }
+  .menu {
+      display: none;
+      flex-direction: column;
+      gap: 10px;
+      background-color: var(--darker-bg);
+      position: absolute;
+      top: var(--header-height);
+      right: 0;
+      width: 200px;
+      padding: 20px;
+      border-left: 1px solid var(--primary-color);
+      border-bottom: 1px solid var(--primary-color);
+      z-index: 999;
+  }
+
+  .menu.active {
+      display: flex;
+  }
+
+  .menu-toggle {
+      display: block;
+      color: var(--primary-color);
+  }
+}
+/* Menú visible */
+.menu-visible {
+  display: flex !important;
+}
+/* Estilos para pantallas más pequeñas */
+@media (max-width: 768px) {
+  section {
+      padding: 60px 15px;
+  }
+
+  .about-content {
+      grid-template-columns: 1fr;
+  }
+
+  .contact-content {
+      grid-template-columns: 1fr;
+  }
+}
