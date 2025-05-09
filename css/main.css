@@ -400,7 +400,6 @@ section h2:after {
     text-align: center;
     margin-top: 40px;
 }
-
 .qr-card {
     background-color: var(--darker-bg);
     padding: 30px;
@@ -422,22 +421,32 @@ section h2:after {
     border-radius: 6px;
     margin-bottom: 15px;
 }
-.social-links {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    justify-content: center;
-}
-
 .social-links a {
+    width: 20px;
     display: flex;
     align-items: center;
     gap: 10px;
     font-size: 1.1rem;
+    background-color: var(--darker-bg);
+    padding: 15px 20px;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 255, 65, 0.2);
+    box-shadow: 0 0 10px rgba(0, 255, 65, 0.05);
+    color: #aaa;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-links a:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-color);
+    box-shadow: 0 0 15px rgba(0, 255, 65, 0.3);
+    color: var(--primary-color);
 }
 
 .social-links a i {
     width: 20px;
+    font-size: 1.3rem;
+    color: var(--primary-color);
 }
 
 /* Footer */
