@@ -188,6 +188,7 @@ nav {
     margin-bottom: 20px;
     color: var(--light-text);
     text-shadow: 0 0 10px rgba(0, 255, 65, 0.5);
+    text-align: left; /* 🔄 Esto es lo nuevo */
 }
 .hero p {
     font-size: 1.5rem;
