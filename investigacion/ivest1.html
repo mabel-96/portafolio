@@ -1,51 +1,81 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM8b+z4+2j7x1l5Z5e5e5e5e5e5e5e5e5e5e5" crossorigin="anonymous">        
-    </head>
-    <body>
-        <header>
-            <h1>Mi Página Web</h1>
-            <nav>
-                <ul>
-                    <li><a href="#home">Inicio</a></li>
-                    <li><a href="#about">Acerca de</a></li>
-                    <li><a href="#services">Servicios</a></li>
-                    <li><a href="#contact">Contacto</a></li>
-                </ul>
-            </nav>
-        </header>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio</title>
+    <!-- Estilos -->
+    
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/brands.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/solid.min.css">
+    
+    
+   </head>
+   <!--cabecera de la pagina-->
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="imagenes/png.png" alt="Logo"> <!-- ✅ -->
+                <h1>Mi Portafolio</h1>
+            </div>
+            <ul class="menu">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#sobre-mi">Sobre Mí</a></li>
+                <li><a href="#estudios">Estudios</a></li>
+                <li><a href="#experiencia">Experiencias laboral</a></li>
+                <li><a href="#writeups">Write-Ups</a></li>
+                <li><a href="#investigacion">Investigación</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
 
+    <!--cuerpo inicial-->
         <main>
-            <section id="home">
-                <h2>Bienvenido a mi página web</h2>
-                <p>Esta es una sección de introducción.</p>
-            </section>
-
-            <section id="about">
-                <h2>Acerca de mí</h2>
-                <p>Información sobre mí.</p>
-            </section>
-
-            <section id="services">
-                <h2>Servicios</h2>
-                <p>Descripción de los servicios ofrecidos.</p>
-            </section>
-
-            <section id="contact">
-                <h2>Contacto</h2>
-                <p>Formulario de contacto.</p>
-            </section>
-        </main>
-
+            <section id="tecnologias" class="features">
+                <h2>Tecnologías</h2>
+                <p>Explora tecnologías populares usadas en desarrollo frontend y backend.</p>
+              
+                <div class="features-grid">
+                  <!-- FRONTEND -->
+                  <div class="feature">
+                    <div class="feature-icon">🟦</div>
+                    <h3>React.js</h3>
+                    <p>Biblioteca de JavaScript para construir interfaces de usuario reactivas y escalables. Utiliza un DOM virtual y JSX.</p>
+                  </div>
+              
+                  <div class="feature">
+                    <div class="feature-icon">🟩</div>
+                    <h3>Vue.js</h3>
+                    <p>Framework progresivo para crear interfaces amigables y modulares con un enfoque sencillo y reactivo.</p>
+                  </div>
+              
+                  <!-- BACKEND -->
+                  <div class="feature">
+                    <div class="feature-icon">🟨</div>
+                    <h3>Node.js</h3>
+                    <p>Entorno de ejecución de JavaScript para el servidor. Ideal para apps en tiempo real con modelo asincrónico.</p>
+                  </div>
+              
+                  <div class="feature">
+                    <div class="feature-icon">🐍</div>
+                    <h3>Django</h3>
+                    <p>Framework de Python de alto nivel. Ofrece seguridad, rapidez y una arquitectura escalable para apps web.</p>
+                  </div>
+                </div>
+              </section>
+              
         <footer>
             <p>&copy; 2023 Mi Página Web. Todos los derechos reservados.</p>
         </footer>
         <script src="script.js"></script>   
     </body>
 </html>
- 
+ |
