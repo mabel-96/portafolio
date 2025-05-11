@@ -525,7 +525,14 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+.features-grid {
+    text-align: left;
+}
 
+.feature {
+    text-align: left;
+    align-items: flex-start;
+}
 
 
 
