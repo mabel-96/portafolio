@@ -170,27 +170,27 @@ nav {
     box-shadow: 0 0 10px rgba(0, 255, 65, 0.3);
 }
 
-.hero h2 {
+.features h2 {
     font-size: 3rem;
     margin-bottom: 20px;
     color: var(--primary-color);
     text-shadow: 0 0 10px rgba(0, 255, 65, 0.5);
 }
-.hero h1 {
+.features h1 {
     font-size: 2.5rem;
     margin-bottom: 20px;
     color: var(--light-text);
     text-shadow: 0 0 10px rgba(0, 255, 65, 0.5);
     text-align: left; /* 🔄 Esto es lo nuevo */
 }
-.hero h3 {
+.features h3 {
     font-size: 2rem;
     margin-bottom: 20px;
     color: var(--light-text);
     text-shadow: 0 0 10px rgba(0, 255, 65, 0.5);
     text-align: left; /* 🔄 Esto es lo nuevo */
 }
-.hero p {
+.features p {
     font-size: 1.5rem;
     margin-bottom: 30px;
 }
