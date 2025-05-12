@@ -1,6 +1,6 @@
 /* main.css - Estilos principales del portafolio */
 
-/* Variables de colores - estilo ciberseguridad */
+/* --- VARIABLES DE COLORES --- */
 :root {
     --primary-color: #00ff41; /* Verde terminal */
     --secondary-color: #007acc; /* Azul tecnológico */
@@ -9,9 +9,10 @@
     --light-text: #f0f0f0; /* Texto claro */
     --header-height: 70px;
     --section-padding: 80px 20px;
+    --max-width: 1200px; /* Ancho máximo para la página */
 }
 
-/* Estilos generales */
+/* --- RESET Y ESTILOS GENERALES --- */
 * {
     margin: 0;
     padding: 0;
@@ -56,7 +57,7 @@ a:hover {
     transform: translateY(-2px);
 }
 
-/* Header y navegación */
+/* --- HEADER Y NAVEGACIÓN --- */
 header {
     position: fixed;
     top: 0;
@@ -74,30 +75,25 @@ nav {
     align-items: center;
     padding: 0 20px;
     height: var(--header-height);
-    max-width: 1200px;
+    max-width: var(--max-width);
     margin: 0 auto;
-    flex-wrap: wrap; /* ✅ para evitar desbordamientos */
-}
-
-.logo h1 {
-    font-size: 1rem; /* ✅ más pequeño para pantallas pequeñas */
-    color: var(--primary-color);
-    white-space: nowrap; /* ✅ evita que se parta en dos líneas */
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 120px;
-}
-
-
-.logo img {
-    height: 40px;
+    flex-wrap: wrap;
 }
 
 .logo h1 {
     font-size: 1.2rem;
     color: var(--primary-color);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 120px;
 }
 
+.logo img {
+    height: 40px;
+}
+
+/* Menú principal */
 .menu {
     display: flex;
     list-style: none;
@@ -130,34 +126,33 @@ nav {
     cursor: pointer;
 }
 
-/* Sección Hero */
+/* --- SECCIÓN HERO --- */
 .hero {
-    min-height: 100vh; /* Asegura que ocupe al menos la altura de la pantalla */
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centra verticalmente */
-    align-items: center;      /* Centra horizontalmente */
+    justify-content: center;
+    align-items: center;
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../assets/images/cyber-bg.jpg');
     background-size: cover;
     background-position: center;
     text-align: left;
     padding: var(--section-padding);
-    padding-top: calc(var(--header-height) + 40px); /* Espacio debajo del header */
+    padding-top: calc(var(--header-height) + 40px);
+    width: 100%; /* Asegura que ocupe todo el ancho */
 }
-
 
 .hero-content {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Asegura el centrado horizontal */
+    align-items: center;
     justify-content: center;
-    text-align: center;
     gap: 20px;
 }
 
 .hero-image {
     display: flex;
-    justify-content: center; /* Centra la imagen */
+    justify-content: center;
     width: 100%;
 }
 
@@ -169,14 +164,14 @@ nav {
     border: 2px solid var(--primary-color);
     box-shadow: 0 0 10px rgba(0, 255, 65, 0.3);
 }
-/* Secciones */
-/*secion de pantalla*/
+
+/* --- SECCIONES GENERALES --- */
 section {
     padding: var(--section-padding);
-    max-width: 1200px;
+    max-width: var(--max-width);
     margin: 0 auto;
 }
-/* Seccion de letras titulos*/
+
 section h2 {
     text-align: center;
     font-size: 2.8rem;
@@ -195,61 +190,35 @@ section h2:after {
     height: 3px;
     background-color: var(--secondary-color);
 }
-section h1 {
-    
-    font-size: 2.0rem;
+
+section h1,
+section h3 {
+    font-size: 2rem;
     margin-bottom: 50px;
     color: var(--primary-color);
 }
-
 
 section h3 {
-    
-    font-size: 1.0rem;
-    margin-bottom: 50px;
-    color: var(--primary-color);
+    font-size: 1.2rem;
 }
 
-
+/* --- ICONOS DE CARACTERÍSTICAS --- */
 .feature-icon {
     font-size: 3rem;
     color: var(--primary-color);
     margin-bottom: 20px;
 }
 
-
-@media (max-width: 768px) {
-    .skill {
-        max-width: 100%; /* Ocupa todo el ancho en pantallas pequeñas */
-        margin-bottom: 40px; /* Reduce el margen inferior en pantallas pequeñas */
-    }
-
-    .progress-text {
-        font-size: 0.7rem; /* Ajusta el tamaño del texto en pantallas más pequeñas */
-    }
-}
-/* Footer */
+/* --- FOOTER --- */
 footer {
     text-align: center;
     padding: 20px;
     background-color: var(--darker-bg);
     border-top: 1px solid rgba(0, 255, 65, 0.2);
 }
-/* Menú móvil: ocultar por defecto */
-/* Mostrar el menú al hacer clic en el icono de hamburguesa */
 
-.menu {
-    display: flex;
-    list-style: none;
-    gap: 30px;
-}
-
-/* Estilos del menú en pantallas pequeñas */
+/* --- MENÚ MÓVIL --- */
 @media (max-width: 768px) {
-    .logo h1 {
-        font-size: 0.9rem;
-        max-width: 120px; /* Reduce aún más en móviles */
-    }
     .menu {
         display: none;
         flex-direction: column;
@@ -273,26 +242,29 @@ footer {
         display: block;
         color: var(--primary-color);
     }
-}
-/* Menú visible */
-.menu-visible {
-    display: flex !important;
-}
-/* Estilos para pantallas más pequeñas */
-@media (max-width: 768px) {
+
+    /* Ajustes en la visualización de las secciones en pantallas más pequeñas */
     section {
         padding: 60px 15px;
     }
 
-    .about-content {
+    .about-content,
+    .contact-content {
         grid-template-columns: 1fr;
     }
 
+    .logo h1 {
+        font-size: 1rem;
+        max-width: 120px;
+    }
+}
+
+/* --- OTRAS SECCIONES REACTIVAS --- */
+@media (max-width: 768px) {
+    .about-content {
+        grid-template-columns: 1fr;
+    }
     .contact-content {
         grid-template-columns: 1fr;
     }
 }
-
-
-
-
