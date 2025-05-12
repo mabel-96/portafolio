@@ -176,20 +176,7 @@ nav {
     color: var(--primary-color);
     text-shadow: 0 0 10px rgba(0, 255, 65, 0.5);
 }
-.feature h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: var(--light-text);
-    text-shadow: 0 0 10px rgba(0, 255, 65, 0.5);
-    text-align: left; /* 🔄 Esto es lo nuevo */
-}
-.feature h3 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    color: var(--light-text);
-    text-shadow: 0 0 10px rgba(0, 255, 65, 0.5);
-    text-align: left; /* 🔄 Esto es lo nuevo */
-}
+
 .feature p {
     font-size: 1.5rem;
     margin-bottom: 30px;
