@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio</title>
+    <!-- Estilos -->
+    
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/brands.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/solid.min.css">
+    
+    
+   </head>
+   <!--cabecera de la pagina-->
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="/portafolio/imagenes/png.png" alt="Logo">
+                <h1>Mi Portafolio</h1>
+            </div>
+            <ul class="menu">
+                <li><a href="../index.html#inicio">Inicio</a></li>
+                <li><a href="#tecnologias">Tecnologias</a></li>
+                <li><a href="#Frontend">Frontend</a></li>
+                <li><a href="#Backend">Backend</a></li>
+                <li><a href="../index.html#contacto">Contacto</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!--cuerpo inicial-->
+        <main>
+            <section id="tecnologias" class="hero">
+                <h2>Tecnologías</h2>
+                <!--intento carrusel-->
+                <div class="carousel">
+                    <div class="carousel-track">
+                      <div class="carousel-item">
+                        <img src="/portafolio/imagenes/React.webp" alt="Imagen 1">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="/portafolio/imagenes/vue.jpeg" alt="Imagen 2">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="/portafolio/imagenes/node.png" alt="Imagen 3">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="/portafolio/imagenes/django.jpg" alt="Imagen 3">
+                      </div>
+                    </div>
+                     
+                </div>
+                <section id="Frontend">
+                    <div class="features-grid">
+                        <p>En el desarrollo web moderno, el uso de tecnologías frontend y backend especializadas ha transformado la manera en que se construyen y escalan las aplicaciones. A medida que las demandas del usuario y la complejidad de las plataformas aumentan, los desarrolladores recurren a herramientas más dinámicas, rápidas y eficientes. Entre estas tecnologías destacan React.js y Vue.js en el lado del cliente (frontend), y Node.js y Django en el lado del servidor (backend). A continuación, se ofrece un análisis detallado sobre qué son estas herramientas, cómo funcionan y por qué son ampliamente utilizadas en la industria actual.</p>
+                    </div>
+                </section>
+                
+                <section id="Frontend">
+                    <div class="features-grid">
+                        <!-- FRONTEND -->
+                        <h2>Frontend</h2> 
+                        <div class="feature-card">
+                            <div class="feature-header">
+                                <h1>React.js</h1>
+                                <div class="feature-icon">⚛️</div>
+                            </div>
+                        
+                            <div class="feature-grid">
+                                <div class="feature-item">
+                                    <h3>¿Qué es?</h3>
+                                    <p>React.js es una biblioteca de JavaScript para construir interfaces de usuario. Fue desarrollada por Facebook y lanzada en 2013...</p>
+                                </div>
+                                
+                                <div class="feature-item">
+                                    <h3>¿Cómo funciona?</h3>
+                                    <p>React utiliza un concepto llamado Virtual DOM, que es una representación en memoria del DOM real...</p>
+                                </div>
+                                
+                                <div class="feature-item">
+                                    <h3>¿Por qué es popular?</h3>
+                                    <p>Su popularidad se debe a su eficiencia, flexibilidad y la gran comunidad que lo respalda...</p>
+                                </div>
+                                
+                                <div class="feature-item">
+                                    <h3>¿Cuándo usarlo?</h3>
+                                    <p>Es ideal para aplicaciones de una sola página (SPA)...</p>
+                                </div>
+                               
+                                <div class="feature-item">
+                                    <h3>¿Cuáles son sus ventajas?</h3>
+                                    <p>Alta velocidad de renderizado, facilidad para crear componentes reutilizables, gran comunidad...</p>
+                                </div>
+                                
+                                <div class="feature-item">
+                                    <h3>¿Cuáles son sus desventajas?</h3>
+                                    <p>Curva de aprendizaje inicial, decisiones arquitectónicas complicadas si no se tiene cuidado...</p>
+                                </div>
+                                
+                                <div class="feature-item">
+                                    <h3>¿Cuáles son sus características?</h3>
+                                    <p>Enfoque en componentes, uso del Virtual DOM, manejo eficiente del estado...</p>
+                                </div>
+                                
+                                <div class="feature-item">
+                                    <h3>Paradigma</h3>
+                                    <ul>
+                                        <li>Basado en componentes reutilizables.</li>
+                                        <li>Reactivo y declarativo.</li>
+                                        <li>Soporte para programación funcional.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="feature">
+                            <div class="feature-card">
+                                <div class="feature-header"> 
+                                    <h1>Vue.js</h1>
+                                    <div class="feature-icon">🟩</div>
+                                </div>
+
+                                <div class="feature-grid">
+                                    <div class="feature-item">   
+                                        <h3>¿Qué es?</h3>
+                                        <p>Vue.js es un framework progresivo de JavaScript para construir interfaces de usuario. Fue creado por Evan You y lanzado en 2014. A diferencia de React, Vue se centra en la integración gradual, lo que significa que puedes usarlo en partes específicas de una aplicación sin necesidad de reescribir todo el código.</p>
+                                    </div>
+                                    <div class="feature-item">
+                                        <h3>¿Cómo funciona?</h3>    
+                                        <p>Vue utiliza un sistema de reactividad que permite que los cambios en el estado de la aplicación se reflejen automáticamente en la interfaz de usuario. Esto se logra mediante un sistema de enlace bidireccional entre el modelo y la vista.</p>
+                                    </div>
+                                    <div class="feature-item">>    
+                                        <h3>¿Por qué es popular?</h3>
+                                        <p>Su popularidad radica en su simplicidad, flexibilidad y la facilidad de integración con otras bibliotecas o proyectos existentes. Además, su documentación es clara y accesible, lo que facilita el aprendizaje.</p>
+                                    </div>
+                                    <div class="feature-item">    
+                                        <h3>¿Cuándo usarlo?</h3>
+                                        <p>Vue es ideal para proyectos donde se busca una integración gradual, como en aplicaciones existentes que necesitan mejoras. También es útil para proyectos pequeños y medianos donde la simplicidad y rapidez de desarrollo son prioritarias.</p>
+                                    </div>
+                                    <div class="feature-item">    
+                                        <h3>¿Cuáles son sus ventajas?</h3>
+                                        <p>Entre sus ventajas se encuentran su facilidad de aprendizaje, la capacidad de integración gradual, un sistema de reactividad eficiente, y una comunidad activa que proporciona soporte y recursos.</p>
+                                    </div>
+                                    <div class="feature-item">    
+                                        <h3>¿Cuáles son sus desventajas?</h3>
+                                        <p>Algunas desventajas incluyen la falta de grandes empresas que lo respalden en comparación con React, y la posibilidad de que su flexibilidad lleve a decisiones arquitectónicas inconsistentes si no se tiene cuidado.</p>
+                                    </div>
+                                   <div class="feature-item">    
+                                        <h3>¿Cuáles son sus características?</h3>
+                                        <p>Vue se caracteriza por su enfoque en la reactividad, su sistema de componentes, la capacidad de integración gradual, y su ecosistema rico en herramientas como Vue Router y Vuex.</p>
+                                    </div>
+                                    <div class="feature-item">  
+                                        <h3>Paradigma:</h3>
+                                        <ul>
+                                            <li>Basado en componentes.</li>
+                                            <li>Reactividad y enlace bidireccional.</li>
+                                            <li>Soporte para programación declarativa.</li>
+                                        </ul>    
+                                    </div>
+                                </div>                  
+                            </div>
+                    </div>        
+                </section>
+                <section id="Backend">
+                  <!-- BACKEND -->
+                    <div class="features-grid">
+                        <h2>Backend</h2> 
+                        <div class="feature-card">
+                            <div class="feature-header">
+                                <div class="feature-icon">🟨</div>
+                                    <h1>Node.js</h1>
+                            </div>
+                        
+                            <div class="feature-grid"> 
+                                <div class="feature-item">     
+                                    <h3>¿Qué es?</h3>
+                                    <p>Node.js es un entorno de ejecución de JavaScript del lado del servidor. Permite ejecutar código JavaScript fuera del navegador, lo que lo convierte en una opción popular para el desarrollo backend.</p>
+                                </div>
+                                <div class="feature-item">     
+                                    <h3>¿Cómo funciona?</h3>
+                                    <p>Node.js utiliza un modelo de I/O no bloqueante y orientado a eventos, lo que permite manejar múltiples conexiones simultáneamente sin bloquear el hilo principal. Esto lo hace altamente eficiente para aplicaciones en tiempo real.</p>
+                                </div>
+                                <div class="feature-item">  
+                                    <h3>¿Por qué es popular?</h3>
+                                    <p>Su popularidad se debe a su capacidad para manejar aplicaciones en tiempo real, como chats y juegos multijugador. Además, permite a los desarrolladores usar JavaScript tanto en el frontend como en el backend, lo que simplifica el desarrollo.</p>
+                                </div>
+                                <div class="feature-item">    
+                                    <h3>¿Cuándo usarlo?</h3>
+                                    <p>Node.js es ideal para aplicaciones en tiempo real, como chats y juegos, así como para APIs RESTful y microservicios. También es útil en proyectos donde se busca un desarrollo rápido y eficiente.</p>
+                                </div>
+                                <div class="feature-item">
+                                    <h3>¿Cuáles son sus ventajas?</h3>
+                                    <p>Entre sus ventajas se encuentran su alta eficiencia en I/O, la capacidad de manejar múltiples conexiones simultáneamente, y la posibilidad de usar JavaScript en el backend.</p>
+                                </div>
+                                <div class="feature-item"> 
+                                    <h3>¿Cuáles son sus desventajas?</h3>
+                                    <p>Algunas desventajas incluyen la falta de soporte para operaciones bloqueantes, lo que puede complicar el manejo de tareas pesadas, y la necesidad de un enfoque diferente al desarrollo tradicional de aplicaciones.</p>
+                                </div>
+                                <div class="feature-item">     
+                                    <h3>¿Cuáles son sus características?</h3>
+                                    <p>Node.js se caracteriza por su modelo de I/O no bloqueante, su enfoque en eventos, y su ecosistema rico en módulos y bibliotecas a través de npm (Node Package Manager).</p>
+                                </div>
+                                <div class="feature-item">
+                                    <h3>Paradigma:</h3>
+                                    <ul>
+                                        <li>Orientado a eventos y no bloqueante.</li>
+                                        <li>Programación asíncrona.</li>
+                                        <li>Modelo de I/O basado en eventos.</li>
+                                    </ul>
+                                </div>
+                            </div>    
+                        </div>     
+                        
+                        <div class="feature-card">
+                            <div class="feature-header">
+                                    <div class="feature-icon">🐍</div>
+                                    <h1>Django</h1>
+                            </div>
+                            <div class="feature-grid">
+                                <div class="feature-item">        
+                                    <h3>¿Qué es?</h3>
+                                    <p>Django es un framework de desarrollo web de alto nivel para Python. Fue diseñado para facilitar el desarrollo rápido y limpio de aplicaciones web, siguiendo el principio DRY (Don't Repeat Yourself).</p>   
+                                </div>
+                                <div class="feature-item">    
+                                    <h3>¿Cómo funciona?</h3>
+                                    <p>Django utiliza un patrón de diseño Modelo-Vista-Controlador (MVC), donde el modelo representa la base de datos, la vista maneja la lógica de negocio y el controlador se encarga de la interacción con el usuario. Proporciona una serie de herramientas y bibliotecas para facilitar el desarrollo.</p>
+                                </div>
+                                <div class="feature-item">    
+                                    <h3>¿Por qué es popular?</h3>
+                                    <p>Su popularidad se debe a su enfoque en la rapidez de desarrollo, la seguridad y la escalabilidad. Además, cuenta con una comunidad activa y una amplia gama de bibliotecas y extensiones.</p>
+                                </div>
+                                <div class="feature-item">    
+                                    <h3>¿Cuándo usarlo?</h3>
+                                    <p>Django es ideal para aplicaciones web complejas y de gran escala, como plataformas de comercio electrónico, redes sociales y sistemas de gestión de contenido. También es útil en proyectos donde la seguridad y la rapidez de desarrollo son prioritarias.</p>
+                                </div>
+                                <div class="feature-item">    
+                                    <h3>¿Cuáles son sus ventajas?</h3>
+                                    <p>Entre sus ventajas se encuentran su enfoque en la rapidez de desarrollo, la seguridad incorporada, un ORM (Object-Relational Mapping) potente, y una comunidad activa que proporciona soporte y recursos.</p>
+                                </div>
+                                <div class="feature-item">    
+                                    <h3>¿Cuáles son sus desventajas?</h3>
+                                    <p>Algunas desventajas incluyen su curva de aprendizaje inicial, especialmente para quienes no están familiarizados con Python, y la posibilidad de que su enfoque en la rapidez de desarrollo lleve a decisiones arquitectónicas poco óptimas si no se tiene cuidado.</p>
+                                </div>
+                                <div class="feature-item">    
+                                    <h3>¿Cuáles son sus características?</h3>
+                                    <p>Django se caracteriza por su enfoque en la rapidez de desarrollo, su ORM potente, su sistema de autenticación y autorización, y su enfoque en la seguridad.</p>
+                                </div>
+                                <div class="feature-item">    
+                                    <h3>Paradigma:</h3>
+                                    <ul>
+                                        <li>Modelo-Vista-Controlador (MVC).</li>
+                                        <li>Enfoque en la rapidez de desarrollo.</li>
+                                        <li>Orientado a objetos.</li>
+                                    </ul>
+                                </div>    
+                            </div>
+                        </div>
+                    </div>    
+                </section>    
+            </section>
+        </main>      
+        <footer>
+            <p>&copy; 2023 Mi Página Web. Todos los derechos reservados.</p>
+        </footer>
+        <script src="js/main.js"></script>   
+    </body>
+</html>
+ |
