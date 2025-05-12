@@ -201,7 +201,23 @@ section h3 {
 section h3 {
     font-size: 1.2rem;
 }
+.feature-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
 
+.feature-header .feature-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0; /* Quita el margen que empuja hacia abajo */
+}
+
+.feature-header h1 {
+    margin: 0; /* Elimina margen vertical innecesario */
+    font-size: 1.8rem;
+    color: var(--primary-color);
+}
 /* --- ICONOS DE CARACTERÍSTICAS --- */
 
 
