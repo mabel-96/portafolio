@@ -181,7 +181,36 @@ nav {
     font-size: 1.5rem;
     margin-bottom: 30px;
 }
+/* stilos carrusel*/
+.carousel {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 25%;
+    border: 2px solid var(--primary-color);
+    box-shadow: 0 0 10px rgba(0, 255, 65, 0.3);
+    margin: 0 auto;
+}
 
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-item {
+    min-width: 100%;
+    height: 100%;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 25%;
+}
 /* Secciones */
 /*secion de pantalla*/
 section {
