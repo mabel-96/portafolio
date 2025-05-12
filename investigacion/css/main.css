@@ -193,11 +193,11 @@ nav {
 }
 
 .carousel-btn.prev {
-    left: -40px; /* puedes ajustar */
+    left: 20px; /* puedes ajustar */
 }
 
 .carousel-btn.next {
-    right: -40px; /* puedes ajustar */
+    right: 20px; /* puedes ajustar */
 }
 
 
