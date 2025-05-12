@@ -193,7 +193,7 @@ section {
     max-width: 1200px;
     margin: 0 auto;
 }
-
+/* Seccion de letras titulos*/
 section h2 {
     text-align: center;
     font-size: 2.5rem;
@@ -212,15 +212,23 @@ section h2:after {
     height: 3px;
     background-color: var(--secondary-color);
 }
-section h1{
-content: '';
-position: absolute;
-bottom: -15px;
-left: 50%;
-transform: translateX(-50%);
-width: 60px;
-height: 3px;
-background-color: var(--secondary-color);
+section h1 {
+    position: relative;
+    text-align: center; /* o left, según lo que busques */
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: var(--primary-color);
+}
+
+section h1::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: var(--secondary-color);
 }
 
 
