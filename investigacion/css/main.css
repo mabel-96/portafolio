@@ -176,12 +176,7 @@ nav {
     color: var(--primary-color);
     text-shadow: 0 0 10px rgba(0, 255, 65, 0.5);
 }
-.features h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-    color: var(--primary-color);
-    text-shadow: 0 0 10px rgba(0, 255, 65, 0.5);
-}
+     
 
 .features-grid {
     text-align: left;
