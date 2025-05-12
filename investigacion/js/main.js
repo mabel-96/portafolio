@@ -36,4 +36,9 @@ document.addEventListener('DOMContentLoaded', function () {
         window.addEventListener('resize', updateCarousel);
         updateCarousel(); // inicial
     }
+    setInterval(() => {
+        index = (index + 1) % items.length;
+        updateCarousel();
+    }, 5000); // cada 5 segundos
+    
 });
