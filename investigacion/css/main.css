@@ -152,7 +152,7 @@ nav {
 /* stilos carrusel*/
 .carousel {
     position: relative;
-    width: 180px;
+    width: 100px;
     height: 180px;
     overflow: hidden;
     border-radius: 50%;
