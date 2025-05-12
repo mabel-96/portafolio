@@ -239,7 +239,7 @@ section h3 {
 }
 
 .feature-item h3 {
-    color: var(--secondary-color);
+    color: var(--primary-color);
     margin-bottom: 10px;
     font-size: 1.2rem;
 }
