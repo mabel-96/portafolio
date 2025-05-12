@@ -203,11 +203,7 @@ section h3 {
 }
 
 /* --- ICONOS DE CARACTERÍSTICAS --- */
-.feature-icon {
-    font-size: 3rem;
-    color: var(--primary-color);
-    margin-bottom: 20px;
-}
+
 
 /* --- FOOTER --- */
 footer {
