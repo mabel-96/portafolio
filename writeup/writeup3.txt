@@ -38,10 +38,11 @@
     <section class="hero">
         
             <div class="hero-content">
-                <h1>Análisis de Seguridad en Red Corporativa</h1>
-                <p>Protegemos su infraestructura empresarial con soluciones avanzadas de ciberseguridad, detección de vulnerabilidades y prevención de amenazas.</p>
-                <a href="#contact" class="btn">Solicitar Evaluación</a>
-                <a href="#services" class="btn btn-outline">Nuestros Servicios</a>
+                <h1>Auditoría con OWASP</h1>
+                <p>fueron escaneadas con la aplicación de OWASP – ZAP, donde se halló varias alertas en cada una como una roja que fue en la página del colegio, en este documento también van a encontrar la explicación de que vulnerabilidades se encontraron cual fue la posible causa y como mitigarla.</p>
+                <a href="#contact" class="btn">colegio</a>
+                <a href="#services" class="btn btn-outline">Banco</a>
+                <a href="#about" class="btn btn-outline">EPS</a>
             </div>
         </div>
     </section>
