@@ -10,3 +10,16 @@
     --header-height: 70px;
     --section-padding: 80px 20px;
 }
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Consolas', 'Courier New', monospace; /* Fuente tipo terminal */
+    background-color: var(--dark-bg);
+    color: var(--light-text);
+    line-height: 1.6;
+}
