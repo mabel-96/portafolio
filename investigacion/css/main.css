@@ -210,7 +210,7 @@ section h3 {
     color: var(--primary-color);
 }
 
-section h5::after {
+section h3::after {
     content: '';
     position: absolute;
     bottom: -15px;
