@@ -39,6 +39,6 @@ document.addEventListener('DOMContentLoaded', function () {
     setInterval(() => {
         index = (index + 1) % items.length;
         updateCarousel();
-    }, 5000); // cada 5 segundos
+    }, 9000); // cada 5 segundos
     
 });
