@@ -160,7 +160,7 @@ nav {
     width: 180px;
     height: 180px;
     object-fit: cover;
-    border-radius: 50%;
+    border-radius: 25%;
     border: 2px solid var(--primary-color);
     box-shadow: 0 0 10px rgba(0, 255, 65, 0.3);
 }
