@@ -218,10 +218,14 @@ section h3 {
     font-size: 1.8rem;
     color: var(--primary-color);
 }
-/* --- ICONOS DE CARACTERÍSTICAS --- */
+/* --- prueba de grid --- */
+.contender-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
 
-
-/* --- FOOTER --- */
+/* --- FOOTER  --- */
 footer {
     text-align: center;
     padding: 20px;
