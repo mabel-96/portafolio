@@ -179,33 +179,7 @@ nav {
     object-fit: cover;
     border-radius: 25%;
 }
-.carousel-btn {
-    position: absolute;
-    top: 70%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
-    color: rgb(11, 173, 19);
-    border: none;
-    padding: 10px;
-    font-size: 2rem;
-    cursor: pointer;
-    z-index: 10;
-    transition: background 0.3s ease;
-}
 
-.carousel-btn:hover {
-    background: rgba(0, 0, 0, 0.8);
-}
-
-/* Botón izquierdo (prev) */
-.carousel-btn.prev {
-    left: -40px;
-}
-
-/* Botón derecho (next) */
-.carousel-btn.next {
-    right: -40px;
-}
 
 
 /* --- SECCIONES GENERALES --- */
