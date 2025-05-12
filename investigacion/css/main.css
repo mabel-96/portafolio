@@ -23,3 +23,76 @@ body {
     color: var(--light-text);
     line-height: 1.6;
 }
+
+h1, h2, h3 {
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    opacity: 0.8;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--dark-bg);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #f07807;
+    transform: translateY(-2px);
+}
+
+/* Header y navegación */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(5, 5, 5, 0.9);
+    backdrop-filter: blur(5px);
+    z-index: 1000;
+    border-bottom: 1px solid var(--primary-color);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: var(--header-height);
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap; /* ✅ para evitar desbordamientos */
+}
+
+.logo h1 {
+    font-size: 1rem; /* ✅ más pequeño para pantallas pequeñas */
+    color: var(--primary-color);
+    white-space: nowrap; /* ✅ evita que se parta en dos líneas */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 120px;
+}
+
+
+.logo img {
+    height: 40px;
+}
+
+.logo h1 {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+}
