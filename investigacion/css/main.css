@@ -169,7 +169,7 @@ nav {
     border: 2px solid var(--primary-color);
     box-shadow: 0 0 10px rgba(0, 255, 65, 0.3);
 }
-
+/* secion de las leltras */
 .features h2 {
     font-size: 3rem;
     margin-bottom: 20px;
