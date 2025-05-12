@@ -264,27 +264,44 @@ section h3 {
 .table-container {
     overflow-x: auto;
     margin-top: 30px;
+    border-radius: 8px;
+    border: 1px solid var(--primary-color);
 }
 
 .comparison-table {
     width: 100%;
     border-collapse: collapse;
-    background-color: var(--darker-bg);
+    font-size: 1rem;
     color: var(--light-text);
-    border: 1px solid var(--secondary-color);
+    background-color: var(--darker-bg);
 }
 
 .comparison-table th,
 .comparison-table td {
     padding: 15px;
-    text-align: left;
     border: 1px solid var(--secondary-color);
+    text-align: left;
 }
 
-.comparison-table th {
+.comparison-table thead th {
     background-color: var(--secondary-color);
     color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
+
+.comparison-table tr:nth-child(even) {
+    background-color: #111;
+}
+
+@media (max-width: 768px) {
+    .comparison-table th,
+    .comparison-table td {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+}
+
 
 @media (max-width: 768px) {
     .comparison-table th,
