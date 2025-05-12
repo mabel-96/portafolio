@@ -152,8 +152,8 @@ nav {
 /* stilos carrusel*/
 .carousel {
     position: relative;
-    width: 180px;
-    height: 180px;
+    width: 200px;
+    height: 200px;
     overflow: hidden;
     border-radius: 25%;
     border: 2px solid var(--primary-color);
@@ -181,10 +181,10 @@ nav {
 }
 .carousel-btn {
     position: absolute;
-    top: 50%;
+    top: 70%;
     transform: translateY(-50%);
     background: rgba(0, 0, 0, 0.5);
-    color: white;
+    color: rgb(11, 173, 19);
     border: none;
     padding: 10px;
     font-size: 2rem;
