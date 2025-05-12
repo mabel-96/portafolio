@@ -1,0 +1,231 @@
+:root {
+  --primary-color: #00ff41;
+  --secondary-color: #007acc;
+  --dark-bg: #0a0a0a;
+  --darker-bg: #050505;
+  --light-text: #f0f0f0;
+  --header-height: 70px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--dark-bg);
+  font-family: 'Consolas', 'Courier New', monospace;
+  color: var(--light-text);
+  line-height: 1.6;
+}
+
+/* HEADER */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: var(--header-height);
+  background: rgba(5, 5, 5, 0.9);
+  border-bottom: 1px solid var(--primary-color);
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: var(--header-height);
+  padding: 0 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.logo h1 {
+  color: var(--primary-color);
+  font-size: 1.2rem;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.menu a {
+  color: var(--light-text);
+  text-decoration: none;
+  position: relative;
+}
+
+.menu a:hover::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: var(--primary-color);
+  left: 0;
+  bottom: -5px;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+/* HERO */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 120px 20px 60px;
+  background: var(--darker-bg);
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.hero p {
+  max-width: 800px;
+  margin-bottom: 30px;
+}
+
+.btn {
+  background: var(--primary-color);
+  color: var(--dark-bg);
+  border: none;
+  padding: 10px 20px;
+  margin: 0 10px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn:hover {
+  background: #f07807;
+  transform: scale(1.05);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+.btn-outline:hover {
+  background: var(--primary-color);
+  color: var(--dark-bg);
+}
+
+/* SECCIÓN ANÁLISIS OWASP */
+.section {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.section h2 {
+  font-size: 2.2rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.section h3 {
+  color: var(--primary-color);
+  font-size: 1.6rem;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+
+.section p,
+.section ul {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.section ul {
+  padding-left: 20px;
+}
+
+.section li {
+  margin-bottom: 8px;
+}
+
+figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 25px 0;
+  padding: 15px;
+  background-color: var(--darker-bg);
+  border: 1px solid rgba(0, 255, 65, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 255, 65, 0.1);
+}
+
+figure img {
+  max-width: 100%;
+  max-height: 400px;
+  object-fit: contain;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+figcaption {
+  color: var(--primary-color);
+  font-style: italic;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    background: var(--darker-bg);
+    position: absolute;
+    top: var(--header-height);
+    right: 0;
+    width: 200px;
+    border-left: 1px solid var(--primary-color);
+    border-bottom: 1px solid var(--primary-color);
+    z-index: 999;
+    padding: 20px;
+  }
+
+  .menu.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .section {
+    padding: 40px 15px;
+  }
+
+  figure img {
+    max-height: 300px;
+  }
+}
