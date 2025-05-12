@@ -212,6 +212,11 @@ section h1::after {
     height: 3px;
     background-color: var(--secondary-color);
 }
+.feature-icon {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
 
 
 @media (max-width: 768px) {
