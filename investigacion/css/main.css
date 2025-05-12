@@ -196,8 +196,7 @@ section h2:after {
     background-color: var(--secondary-color);
 }
 section h1 {
-    position: relative;
-    text-align:left; /* o left, según lo que busques */
+    
     font-size: 2.5rem;
     margin-bottom: 50px;
     color: var(--primary-color);
