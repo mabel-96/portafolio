@@ -149,21 +149,57 @@ nav {
     justify-content: center;
     gap: 20px;
 }
-
-.hero-image {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-}
-
-.hero-image img {
+/* stilos carrusel*/
+.carousel {
+    position: relative;
     width: 180px;
     height: 180px;
-    object-fit: cover;
-    border-radius: 25%;
+    overflow: hidden;
+    border-radius: 50%;
     border: 2px solid var(--primary-color);
     box-shadow: 0 0 10px rgba(0, 255, 65, 0.3);
+    margin: 0 auto;
 }
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-item {
+    min-width: 100%;
+    height: 100%;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: var(--primary-color);
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.carousel-btn.prev {
+    left: -40px; /* puedes ajustar */
+}
+
+.carousel-btn.next {
+    right: -40px; /* puedes ajustar */
+}
+
 
 /* --- SECCIONES GENERALES --- */
 section {
