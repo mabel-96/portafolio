@@ -40,20 +40,6 @@ document.addEventListener('DOMContentLoaded', function () {
         index = (index + 1) % items.length;
         updateCarousel();
     }, 9000); // cada 5 segundos
-    // acordeon
-    document.querySelectorAll('.accordion-header').forEach(header => {
-        header.addEventListener('click', () => {
-            const content = header.nextElementSibling;
-    
-            // Cierra otros abiertos
-            document.querySelectorAll('.accordion-content').forEach(c => {
-                if (c !== content) c.style.display = 'none';
-            });
-    
-            // Toggle actual
-            content.style.display = content.style.display === 'block' ? 'none' : 'block';
-        });
-    });
-    
+     
     
 });

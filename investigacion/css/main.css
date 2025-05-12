@@ -149,52 +149,6 @@ nav {
     justify-content: center;
     gap: 20px;
 }
-/*estilos acordeon*/
-.accordion {
-    max-width: 700px;
-    margin: 0 auto;
-    border: 1px solid var(--secondary-color);
-    border-radius: 8px;
-    overflow: hidden;
-}
-
-.accordion-item + .accordion-item {
-    border-top: 1px solid var(--secondary-color);
-}
-
-.accordion-header {
-    width: 100%;
-    background-color: var(--darker-bg);
-    color: var(--primary-color);
-    text-align: left;
-    padding: 15px 20px;
-    font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer;
-    border: none;
-    outline: none;
-    transition: background-color 0.3s ease;
-}
-
-.accordion-header:hover {
-    background-color: var(--secondary-color);
-}
-
-.accordion-content {
-    display: none;
-    padding: 20px;
-    background-color: #111;
-    text-align: center;
-}
-
-.accordion-content img {
-    max-width: 100%;
-    height: auto;
-    border: 2px solid var(--primary-color);
-    border-radius: 6px;
-    box-shadow: 0 0 10px rgba(0, 255, 65, 0.2);
-}
-
 /* stilos carrusel*/
 .carousel {
     position: relative;
