@@ -41,5 +41,21 @@ document.addEventListener('DOMContentLoaded', function () {
         updateCarousel();
     }, 9000); // cada 5 segundos
      
-    
+    document.addEventListener('DOMContentLoaded', () => {
+        const images = document.querySelectorAll('.image-gallery img');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+      
+        images.forEach(img => {
+          img.addEventListener('click', () => {
+            lightboxImg.src = img.src;
+            lightbox.style.display = 'flex';
+          });
+        });
+      
+        lightbox.addEventListener('click', () => {
+          lightbox.style.display = 'none';
+        });
+      });
+      
 });
