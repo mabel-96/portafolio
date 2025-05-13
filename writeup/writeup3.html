@@ -40,9 +40,13 @@
             <div class="hero-content">
                 <h1>Auditoría con OWASP</h1>
                 <p>fueron escaneadas con la aplicación de OWASP – ZAP, donde se halló varias alertas en cada una como una roja que fue en la página del colegio, en este documento también van a encontrar la explicación de que vulnerabilidades se encontraron cual fue la posible causa y como mitigarla.</p>
-                <a href="#contact" class="btn">colegio</a>
-                <a href="#services" class="btn btn-outline">Banco</a>
-                <a href="#about" class="btn btn-outline">EPS</a>
+                <a href="#analisis-owasp" class="btn btn-primary">Ver análisis</a>
+                <a href="#colegio" class="btn btn-outline">Colegio</a>
+                <a href="#sanitas" class="btn btn-outline">EPS Sanitas</a>
+                <a href="#sufi" class="btn btn-outline">SUFI</a>
+                <a href="#exito" class="btn btn-outline">Almacenes Éxito</a>
+                <a href="#instagram" class="btn btn-outline">Instagram</a>             
+                
             </div>
         </div>
     
@@ -62,16 +66,16 @@
                         Se identificaron vulnerabilidades clasificadas por colores (rojo, naranja, amarillo y azul) y se propusieron mitigaciones para cada caso.
                         </p>
                     
-                        <h3>Auditoría: Colegio Enrique Olaya Herrera</h3>
+                        <h3 >Auditoría: Colegio Enrique Olaya Herrera</h3>
                         <ul>
-                        <li><strong>Rojo:</strong> Posible exposición de metadatos de nube — <em>Evitar confiar en datos del usuario en configuraciones NGINX</em>.</li>
-                        <li><strong>Naranja:</strong> Falta de protección contra XSS — <em>Establecer Content-Security-Policy</em>.</li>
-                        <li><strong>Amarillo:</strong> Cookie sin HttpOnly — <em>Configurar con setHttpOnly(true)</em>.</li>
-                        <li><strong>Azul:</strong> Divulgación de información — <em>Eliminar comentarios con datos confidenciales</em>.</li>
+                            <li><strong>Rojo:</strong> Posible exposición de metadatos de nube — <em>Evitar confiar en datos del usuario en configuraciones NGINX</em>.</li>
+                            <li><strong>Naranja:</strong> Falta de protección contra XSS — <em>Establecer Content-Security-Policy</em>.</li>
+                            <li><strong>Amarillo:</strong> Cookie sin HttpOnly — <em>Configurar con setHttpOnly(true)</em>.</li>
+                            <li><strong>Azul:</strong> Divulgación de información — <em>Eliminar comentarios con datos confidenciales</em>.</li>
                         </ul>
-                        <figure>
-                        <img src="imagenes/olaya-herrera.png" alt="Captura OWASP - Colegio Enrique Olaya Herrera">
-                        <figcaption>Figura 1. Resultados de escaneo: Colegio Enrique Olaya Herrera</figcaption>
+                        <figure id="colegio">
+                            <img src="/portafolio/imagenes/olaya.JPG" alt="Captura OWASP - Colegio Enrique Olaya Herrera">
+                            <figcaption>Figura 1. Resultados de escaneo: Colegio Enrique Olaya Herrera</figcaption>
                         </figure>
                     
                         <h3>Auditoría: EPS Sanitas</h3>
@@ -80,8 +84,8 @@
                         <li><strong>Amarillo:</strong> Cookie sin atributo "Secure" — <em>Aplicar SAST y configurar encabezados correctamente</em>.</li>
                         <li><strong>Azul:</strong> Tokens de sesión visibles — <em>Alerta informativa</em>.</li>
                         </ul>
-                        <figure>
-                        <img src="imagenes/sanitas.png" alt="Captura OWASP - EPS Sanitas">
+                        <figure id="sanitas">
+                        <img src="/portafolio/imagenes/sanita.JPG" alt="Captura OWASP - EPS Sanitas">
                         <figcaption>Figura 2. Resultados de escaneo: EPS Sanitas</figcaption>
                         </figure>
                     
@@ -90,8 +94,8 @@
                         <li><strong>Naranja:</strong> Falta de Content-Security-Policy — <em>Establecer políticas seguras</em>.</li>
                         <li><strong>Amarillo:</strong> Falta X-Content-Type-Options: nosniff — <em>Configurar encabezado</em>.</li>
                         </ul>
-                        <figure>
-                        <img src="imagenes/sufi.png" alt="Captura OWASP - SUFI Bancolombia">
+                        <figure id="sufi">
+                        <img src="/portafolio/imagenes/sufi.JPG" alt="Captura OWASP - SUFI Bancolombia">
                         <figcaption>Figura 3. Resultados de escaneo: SUFI (Bancolombia)</figcaption>
                         </figure>
                     
@@ -101,8 +105,8 @@
                         <li><strong>Naranja:</strong> Protección insuficiente — <em>Aplicar defensas completas</em>.</li>
                         <li><strong>Amarillo:</strong> Revelación de marca de tiempo — <em>Verificar confidencialidad</em>.</li>
                         </ul>
-                        <figure>
-                        <img src="imagenes/exito.png" alt="Captura OWASP - Almacenes Éxito">
+                        <figure id="exito">
+                        <img src="/portafolio/imagenes/exito.JPG" alt="Captura OWASP - Almacenes Éxito">
                         <figcaption>Figura 4. Resultados de escaneo: Almacenes Éxito</figcaption>
                         </figure>
                     
@@ -111,16 +115,14 @@
                         <li><strong>Naranja:</strong> Acceso a archivos confidenciales — <em>Proteger archivos administrativos</em>.</li>
                         <li><strong>Amarillo:</strong> Scripts de terceros — <em>Validar fuentes confiables</em>.</li>
                         </ul>
-                        <figure>
-                        <img src="imagenes/instagram.png" alt="Captura OWASP - Instagram">
+                        <figure id="instagram">
+                        <img src="/portafolio/imagenes/instagram.JPG" alt="Captura OWASP - Instagram">
                         <figcaption>Figura 5. Resultados de escaneo: Instagram</figcaption>
                         </figure>
                     </section>
                 </div>
             </div> 
         </section>
-                    
-       
     </section>
     <script src="js/main.js"></script>   
 </body>
